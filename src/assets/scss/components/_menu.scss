@@ -1,0 +1,20 @@
+.jp-menu {
+	ul, ol {
+		list-style: none;
+	}
+
+}
+
+.jp-menu--dashed a {
+	border-left: 1px solid $white;
+	padding: $global-padding / 10 $global-padding;
+
+	&:first-child {
+		border: 0;
+	}
+}
+
+.jp-menu__list-item {
+	display: inline-block;
+
+}

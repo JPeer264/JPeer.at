@@ -1,0 +1,7 @@
+# modules
+bower_components
+node_modules
+
+# grunt generated dir
+tmp
+dist

@@ -1,0 +1,48 @@
+.jp-languageChooser {
+
+}
+
+.jp-languageChooser--active {
+    border-bottom: 1px solid $white;
+    line-height: 1.2rem;
+}
+
+// .languageChooser {
+//     display: inline-block;
+
+//     margin-right: $space-between-links;
+//     position: relative;
+
+//     button {
+//         color: black !important;
+//         background-color: none !important;
+
+//         &:hover, &:focus {
+//             background-color: none !important;
+//             color: black;
+//         }
+//     }
+
+//     ul {
+//         list-style-type: none;
+//         padding: 0;
+//         margin: 0;
+
+//         a {
+//             color: black;
+
+//             &:hover {
+//                 text-decoration: none;
+//             }
+//         }
+//     }
+
+//     .dropdown-pane {
+//         // width: auto;
+//         position: absolute;
+//         // top: $header-height;
+//         right: 0;
+//         left: initial !important;
+//         z-index: 99;
+//     }
+// }

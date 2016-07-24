@@ -1,0 +1,18 @@
+// =============
+// FOOTER MODULE
+// =============
+
+.jp-footer {
+	height: 50px;
+	background: $primary-color;
+	color: $white;
+
+	.jp-logo {
+		top: -($logo-width / 2);
+		right: $global-padding;
+	}
+}
+
+.jp-footer__inner {
+	height: inherit;
+}

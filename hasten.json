@@ -1,0 +1,10 @@
+{
+	"framework": "angular",
+	"taskrunner": "Gruntfile.js",
+	"names": {
+		"src": "src",
+		"dest": "dist",
+		"assets": "assets",
+		"app": ""
+	}
+}
