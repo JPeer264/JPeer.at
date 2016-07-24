@@ -1,0 +1,41 @@
+// =============
+// SLIDER MODULE
+// =============
+
+.jp-slider {
+    background: $primary-color;
+}
+
+.jp-slider__inner {
+    // @extend .row;
+    position: relative;
+    overflow: hidden;
+}
+
+.jp-slider__items {
+    height: 100%;
+    position: relative;
+    white-space: nowrap;
+    transition: transform 1s ease-in-out;
+
+    .no-js & {
+        overflow: auto;
+    }
+
+    .no-csstransforms & {
+        left: 0;
+    }
+}
+
+.jp-slider__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    white-space: normal;
+
+    img {
+        width: 100%;
+    }
+}

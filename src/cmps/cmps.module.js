@@ -10,4 +10,5 @@ angular.module('cmps', [
     'cmps.navbar',
     'cmps.project',
     'cmps.skills',
+    'cmps.slider',
 ]);
