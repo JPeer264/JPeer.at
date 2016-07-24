@@ -5,7 +5,15 @@
         "PROJECTS": "Projects"
     },
 
+    "SKILL_STATUS": {
+        "FIRST": "Beginner",
+        "SECOND": "Not bad",
+        "THIRD": "Ehm, wow",
+        "FOURTH": "Status: INSANE"
+    },
+
     "CONTACT_ME": "Contact me!",
     "RECENT_WORK": "Recent work",
-    "BEST_SKILLS": "Best skills"
+    "BEST_SKILLS": "Best skills",
+    "SKILLS": "Skills"
 }
