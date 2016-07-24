@@ -9,4 +9,5 @@ angular.module('cmps', [
     'cmps.contact',
     'cmps.navbar',
     'cmps.project',
+    'cmps.skills',
 ]);

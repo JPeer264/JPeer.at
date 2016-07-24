@@ -1,0 +1,11 @@
+<div class="jp-skills">
+    <div class="jp-skills__heading">
+        <span>Beginner</span>
+        <span>Not bad</span>
+        <span>Ehm, wow</span>
+        <span>Status: INSANE</span>
+    </div>
+    <div class="jp-skills__line" data-ng-repeat="skill in skills" style="background-color: {{ skill.color  }}; width: {{ skillsCtrl.percent(skill.percent) }}%">
+        <div class="jp-skills__title" data-ng-bind="skill.skill"></div>
+    </div>
+</div>
