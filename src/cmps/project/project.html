@@ -3,7 +3,9 @@
         <img src="{{ img }}" alt="{{ title }}" class="jp-project__image">
     </div>
     <div class="jp-project__content">
-        <div class="jp-project__title" data-ng-bind="title"></div>
+        <a data-ng-href="#/{{ href }}">
+            <div class="jp-project__title" data-ng-bind="title"></div>
+        </a>
         <div class="jp-project__tags">
             <div class="jp-project__tag" data-ng-repeat="tag in tags" data-ng-bind="tag"></div>
         </div>

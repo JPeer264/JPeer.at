@@ -28,7 +28,8 @@ function projectDirective() {
             scope: {
                 title: '@',
                 tags: '=',
-                img: '@'
+                img: '@',
+                href: '@'
             }, // {} = isolate, true = child, false/undefined = no change
             controller: 'ProjectCtrl',
             controllerAs: 'projectCtrl',
