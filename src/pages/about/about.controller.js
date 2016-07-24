@@ -7,14 +7,16 @@ angular
  * @name pages.about:AboutCtrl
  *
  * @requires $scope
+ * @requires service.contentService
  *
  * @description
  * AboutCtrl for the about page
  */
 AboutController.$inject = [
-	'$scope'
+	'$scope',
+    'contentService'
 ];
 
-function AboutController($scope) {
-    console.log('About page');
+function AboutController($scope, contentService) {
+    $scope.skills = (contentService.testData()).skills;
 }

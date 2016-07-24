@@ -7,14 +7,16 @@ angular
  * @name pages.home:HomeCtrl
  *
  * @requires $scope
+ * @requires service.contentService
  *
  * @description
  * HomeCtrl for the home page
  */
 HomeController.$inject = [
-    '$scope'
+    '$scope',
+    'contentService'
 ];
 
-function HomeController($scope) {
-    console.log('home page');
+function HomeController($scope, contentService) {
+    $scope.skills = (contentService.testData()).skills;
 }

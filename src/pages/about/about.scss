@@ -1,0 +1,13 @@
+.jp-about__picture {
+    position: relative;
+
+    &:before {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 200%;
+        background: black;
+        position: absolute;
+        left: -200%;
+    }
+}
