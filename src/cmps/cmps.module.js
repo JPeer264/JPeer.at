@@ -8,4 +8,5 @@ angular.module('cmps', [
     'cmps.languageChooser',
     'cmps.contact',
     'cmps.navbar',
+    'cmps.project',
 ]);
