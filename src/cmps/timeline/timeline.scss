@@ -1,0 +1,69 @@
+// ===============
+// TIMELINE MODULE
+// ===============
+$timeline-width: 70px;
+// @todo resize timeline base
+
+.jp-timeline {
+}
+
+.jp-timeline__base {
+    display: inline-block;
+    position: relative;
+    height: 100px;
+    line-height: 100px;
+    vertical-align: middle;
+}
+
+.jp-timeline--circle {
+    &:before {
+        width: 70px;
+        height: 100%;
+        content: '';
+        display: inline-block;
+        background-image: radial-gradient(
+            100% 50%, /* the -23px left position varies by your "gap" */
+            circle closest-corner, /* keep radius to half height */
+            transparent 52px, /*transparent at edge of gap */
+            $white 54px /* end circle border and begin color of rest of background */
+        );
+    }
+
+    &:after {
+        width: 70px;
+        height: 100%;
+        content: '';
+        display: inline-block;
+        background-image: radial-gradient(
+            0% 50%, /* the -23px left position varies by your "gap" */
+            circle closest-corner, /* keep radius to half height */
+            transparent 52px, /*transparent at edge of gap */
+            $white 54px /* start circle "border" */
+        );
+    }
+}
+
+.jp-timeline--line {
+    &:before {
+        width: 52px;
+        height: 100%;
+        content: '';
+        display: inline-block;
+        background: $white;
+    }
+
+    &:after {
+        width: 52px;
+        height: 100%;
+        margin-left: 36px;
+        content: '';
+        display: inline-block;
+        background: $white;
+    }
+}
+
+.jp-timeline__background {
+    background-image: linear-gradient(top, $primary-color 50%, transparent 50%);
+    background-position: ($skill-margin * 0) 50%;
+    background-attachment: fixed;
+}

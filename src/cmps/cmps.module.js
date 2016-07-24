@@ -11,4 +11,5 @@ angular.module('cmps', [
     'cmps.project',
     'cmps.skills',
     'cmps.slider',
+    'cmps.timeline',
 ]);
