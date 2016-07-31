@@ -1,13 +1,13 @@
 <div class="jp-menu jp-menu--dashed">
-    <nav>
-        <ul>
-            <a href="#/about" class="jp-menu__list-item" data-ng-class="{active: toState.data.activetab === 'home'}">
+    <nav class="jp-menu__main">
+        <ul class="clearfix">
+            <a href="#/about" class="jp-menu__list-item" data-ng-class="{'jp-menu__list-item--active': toState.data.activetab === 'about'}">
                 <li>About</li>
             </a>
-            <a href="#/projects" class="jp-menu__list-item" data-ng-class="{active: toState.data.activetab === 'projects'}">
+            <a href="#/projects" class="jp-menu__list-item" data-ng-class="{'jp-menu__list-item--active': toState.data.activetab === 'projects'}">
                 <li>Projects</li>
             </a>
-            <a href="#/contact" class="jp-menu__list-item" data-ng-class="{active: toState.data.activetab === 'contact'}">
+            <a href="#/contact" class="jp-menu__list-item" data-ng-class="{'jp-menu__list-item--active': toState.data.activetab === 'contact'}">
                 <li>Contact</li>
             </a>
         </ul>

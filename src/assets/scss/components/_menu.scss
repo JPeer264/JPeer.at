@@ -2,19 +2,39 @@
 	ul, ol {
 		list-style: none;
 	}
-
 }
 
-.jp-menu--dashed a {
+.jp-menu--dashed .jp-menu__list-item {
 	border-left: 1px solid $white;
-	padding: $global-padding / 10 $global-padding;
+	padding: $global-padding / 10 $global-padding / 2;
 
 	&:first-child {
 		border: 0;
 	}
 }
 
+.jp-menu__main {
+    transition: background .3s, color .3s;
+
+    a:hover {
+        background: darken($white, 20%);
+        color: $primary-color;
+    }
+
+    a:first-child {
+        border-radius: 5px 0 0 5px;
+    }
+
+    a:last-child {
+        border-radius: 0 5px 5px 0;
+    }
+}
+
 .jp-menu__list-item {
 	display: inline-block;
+}
 
+.jp-menu__list-item--active {
+    background: $white;
+    color: $primary-color !important;
 }
