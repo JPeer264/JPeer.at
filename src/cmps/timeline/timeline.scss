@@ -83,13 +83,6 @@
     background-color: $timeline-color2;
 }
 
-.jp-timeline__mask {
-    background-image: linear-gradient(top, transparent 60%, $white 60%);
-    background-position: ($skill-margin * 0) 60%;
-    background-attachment: fixed;
-    transition: all .5s;
-}
-
 .jp-timeline__boxes {
     height: 100%;
     width: 100%;
@@ -129,6 +122,13 @@
 @media #{$medium-up} {
     .jp-timeline {
         justify-content: center;
+    }
+
+    .jp-timeline__mask {
+        background-image: linear-gradient(top, transparent 60%, $white 60%);
+        background-position: ($skill-margin * 0) 60%;
+        background-attachment: fixed;
+        transition: all .5s;
     }
 }
 
