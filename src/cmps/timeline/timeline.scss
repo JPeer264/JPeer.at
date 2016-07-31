@@ -1,51 +1,63 @@
 // ===============
 // TIMELINE MODULE
 // ===============
-$timeline-width: 70px;
-// @todo resize timeline base
-
 .jp-timeline {
 }
 
 .jp-timeline__base {
     display: inline-block;
     position: relative;
-    height: 100px;
-    line-height: 100px;
+    height: $timeline-width;
+    line-height: $timeline-width;
     vertical-align: middle;
 }
 
 .jp-timeline--circle {
+    position: relative;
+
+    // cheating - don't do this at home!
+    i {
+        position: absolute;
+        left: calc(50% - .5rem);
+        top: calc(50% - .5rem);
+        width: 1rem;
+        font-size: 1rem;
+        text-align: center;
+        color: $white;
+    }
+
     &:before {
-        width: 70px;
-        height: 100%;
+        width: $timeline-width;
+        height: $timeline-width;
         content: '';
         display: inline-block;
         background-image: radial-gradient(
             100% 50%, /* the -23px left position varies by your "gap" */
             circle closest-corner, /* keep radius to half height */
-            transparent 52px, /*transparent at edge of gap */
-            $white 54px /* end circle border and begin color of rest of background */
+            transparent (($timeline-width / 2) + 1px), /*transparent at edge of gap */
+            $white (($timeline-width / 2) + 3px) /* end circle border and begin color of rest of background */
         );
     }
 
     &:after {
-        width: 70px;
-        height: 100%;
+        width: $timeline-width;
+        height: $timeline-width;
         content: '';
         display: inline-block;
         background-image: radial-gradient(
-            0% 50%, /* the -23px left position varies by your "gap" */
-            circle closest-corner, /* keep radius to half height */
-            transparent 52px, /*transparent at edge of gap */
-            $white 54px /* start circle "border" */
+            0% 50%,
+            circle closest-corner,
+            transparent (($timeline-width / 2) + 1px),
+            $white (($timeline-width / 2) + 3px)
         );
     }
 }
 
 .jp-timeline--line {
+    height: $timeline-width * 4;
+
     &:before {
-        width: 52px;
+        width: $timeline-width / 1.25;
         height: 100%;
         content: '';
         display: inline-block;
@@ -53,9 +65,9 @@ $timeline-width: 70px;
     }
 
     &:after {
-        width: 52px;
+        width: $timeline-width / 1.25;
         height: 100%;
-        margin-left: 36px;
+        margin-left: $timeline-width / 2.5;
         content: '';
         display: inline-block;
         background: $white;
@@ -63,7 +75,99 @@ $timeline-width: 70px;
 }
 
 .jp-timeline__background {
-    background-image: linear-gradient(top, $primary-color 50%, transparent 50%);
-    background-position: ($skill-margin * 0) 50%;
+    background-color: $timeline-color;
+    transition: background-color .5s;
+}
+
+.jp-timeline__background--green {
+    background-color: $timeline-color2;
+}
+
+.jp-timeline__mask {
+    background-image: linear-gradient(top, transparent 60%, $white 60%);
+    background-position: ($skill-margin * 0) 60%;
     background-attachment: fixed;
+    transition: all .5s;
+}
+
+.jp-timeline__boxes {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.jp-timeline__box {
+    width: 300px;
+    margin-top: 0;
+    padding: $global-padding;
+    position: absolute;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transition: all .5s;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    &:nth-child(2n + 1) {
+        left: 170px;
+    }
+
+    &:nth-child(2n) {
+        right: 170px;
+    }
+}
+
+.jp-timeline__box--hidden {
+    // padding not margin - due to js reasons ;)
+    padding-top: 40px;
+    opacity: 0;
+}
+
+@media #{$medium-up} {
+    .jp-timeline {
+        justify-content: center;
+    }
+}
+
+@media #{$medium-only} {
+    .jp-timeline--line {
+        height: $timeline-width * 5;
+    }
+
+    .jp-timeline__box {
+        width: 200px;
+
+        &:nth-child(2n + 1) {
+            left: 70px;
+        }
+
+        &:nth-child(2n) {
+            right: 70px;
+        }
+    }
+}
+
+@media #{$small-only} {
+    .jp-timeline--line {
+        height: $timeline-width * 5;
+    }
+
+    .jp-timeline__box {
+        width: 200px;
+
+        &:nth-child(2n + 1) {
+            // set with javascript dynamically
+            right: $global-margin;
+            left: initial;
+        }
+
+        &:nth-child(2n) {
+            // set with javascript dynamically
+            right: $global-margin;
+            left: initial;
+        }
+    }
 }
