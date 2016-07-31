@@ -38,6 +38,7 @@ function timelineDirective(RevealService) {
                 var $boxes = $$.get('.jp-timeline__box');
                 var $window = $$.get(window);
                 var $circles = $$.get('.jp-timeline--circle');
+                var $lines = $$.get('.jp-timeline--line');
                 var $background = $$.get('.jp-timeline__background');
                 var windowHeight = $window.height();
                 var triggerHeight = windowHeight * 0.6; // from bottom of the screen
@@ -65,7 +66,7 @@ function timelineDirective(RevealService) {
                         var thisOffsetTop = $trigger.offset().top;
 
                         // check height and add new color
-                        if ((thisOffsetTop - triggerHeight) < that.scroll && (thisOffsetTop - triggerHeight) + 200 > that.scroll) {
+                        if ((thisOffsetTop - triggerHeight) < that.scroll && (thisOffsetTop - triggerHeight) + ($circles.first().height() + $lines.first().height()) > that.scroll) {
                             $background.addClass(bgClassName);
                         } else {
 
