@@ -11,6 +11,11 @@
 @import 'components/menu';
 @import 'components/divide';
 @import 'components/logo';
+@import 'components/section';
+
+body, html {
+    min-width : 320px;
+}
 
 .flex {
     display: flex;

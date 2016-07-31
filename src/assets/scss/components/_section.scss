@@ -1,0 +1,42 @@
+// =================
+// SECTION COMPONENT
+// =================
+
+.jp-section {
+    background: $secondary-color;
+}
+
+.jp-section__inner {
+    padding: $global-padding;
+}
+
+.jp-section--quote {
+    @extend .row;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        width: 100%;
+        padding: $global-padding;
+        margin: 0;
+        text-align: center;
+        letter-spacing: 1px;
+        font-style: italic;
+        color: lighten($black, 20%);
+
+        &:before {
+            content: '"';
+            display: inline-block;
+        }
+
+        &:after {
+            content: '"';
+            display: inline-block;
+        }
+    }
+
+}
