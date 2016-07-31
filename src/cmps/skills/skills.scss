@@ -9,6 +9,7 @@ $skill-margin: (100% - ($skill-padding-right)) / ($skill-amount-text - 1);
 .jp-skills {
     width: 100%;
     overflow: hidden;
+    margin-bottom: $global-margin;
 }
 
 .jp-skills__heading {
