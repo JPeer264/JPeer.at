@@ -60,13 +60,12 @@ function timelineDirective(RevealService) {
                     });
 
                     bgReveal.custom({
-                        triggerHeight: triggerHeight,
-                        delayedTriggerHeight: 340
+                        triggerHeight: triggerHeight
                     }, $this, function ($trigger, that) {
                         var thisOffsetTop = $trigger.offset().top;
 
                         // check height and add new color
-                        if ((thisOffsetTop - triggerHeight) < that.scroll && (thisOffsetTop - triggerHeight) + 150 > that.scroll) {
+                        if ((thisOffsetTop - triggerHeight) < that.scroll && (thisOffsetTop - triggerHeight) + 200 > that.scroll) {
                             $background.addClass(bgClassName);
                         } else {
 
