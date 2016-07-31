@@ -1,3 +1,6 @@
+.jp-about {
+}
+
 .jp-about__picture {
     position: relative;
 
@@ -9,5 +12,19 @@
         background: black;
         position: absolute;
         left: -200%;
+    }
+}
+
+@media #{$small-only} {
+    .jp-about__picture {
+        border-radius: 50%;
+        overflow: hidden;
+        background: black;
+        width: 50%;
+        margin: $global-margin auto;
+    }
+
+    .jp-about__text {
+        text-align: center;
     }
 }

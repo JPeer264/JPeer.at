@@ -1,13 +1,13 @@
 <div>
-    <section>
+    <section class="jp-about">
         <div class="row">
-            <div class="columns">
+            <div class="columns small-12 medium-6">
                 <div class="jp-about__picture">
                     <img src="assets/img/me_bw.png"/>
                 </div>
             </div>
-            <div class="columns flex flex-center">
-                <div>
+            <div class="columns small-12 medium-6 flex flex-center">
+                <div class="jp-about__text">
                     <h1>about me </h1>
                     <span>I'm a Front and Back End Developer from Graz, Austria.</span>
                     <p>Currently I'm studying at the University of Applied Science in Sankt P&ouml;lten, Austria.</p>
@@ -19,12 +19,6 @@
     <div>
         <div class="jp-divide">
             <div class="jp-divide__title">
-                <span>Timeline</span>
-            </div>
-        </div>
-        <div data-timeline></div>
-        <div class="jp-divide">
-            <div class="jp-divide__title">
                 <span data-translate="SKILLS"></span>
             </div>
         </div>
@@ -33,9 +27,55 @@
                 <div data-skills="skills"></div>
             </div>
         </div>
+
+        <section class="jp-section">
+            <div class="jp-section__inner row">
+                <div class="column small-12 medium-6">
+                    Some things about my self.
+
+                    What do I like
+                    What I do not like
+
+                    With what I am working
+                    Well structured code is important
+
+                    Want to learn new stuff
+
+                </div>
+                <div class="column small-12 medium-6">
+                    A picture of something nice !
+                </div>
+            </div>
+        </section>
+
+
+        <div class="jp-divide">
+            <div class="jp-divide__title">
+                <span>Timeline</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="columns">
+                <div data-timeline></div>
+            </div>
+        </div>
+
+
+        <div class="jp-section">
+            <div class="jp-section--quote">
+                <h4>Traveling is the way you learn the most</h4>
+            </div>
+        </div>
+
         <div class="jp-divide">
             <div class="jp-divide__title">
                 <span data-translate="RECENT_WORK"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="columns medium-4" data-ng-repeat="i in [1,2,3]">
+                <div data-project data-title="Project #1" data-tags="['webdesign', 'design', 'test']" data-img="http://www.teuflischgenial.de/wp-content/uploads/2012/02/Webdesign_Immobilien.jpg"></div>
             </div>
         </div>
     </div>
