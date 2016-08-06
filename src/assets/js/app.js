@@ -93,7 +93,7 @@ function config($stateProvider, $locationProvider, $urlRouterProvider, $translat
                 },
                 main: {
                     templateUrl: 'pages/project/project.html',
-                    controller: 'ProjectCtrl'
+                    controller: 'ProjectPageCtrl'
                 },
                 footer: {
                     template: '<div data-footer></div>'

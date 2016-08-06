@@ -1,20 +1,20 @@
 angular
 	.module('pages.project')
-	.controller('ProjectCtrl', ProjectController);
+	.controller('ProjectPageCtrl', ProjectPageController);
 
 /**
  * @ngdoc controller
- * @name pages.project:ProjectCtrl
+ * @name pages.project:ProjectPageCtrl
  *
  * @requires $scope
  *
  * @description
- * ProjectCtrl for the project page
+ * ProjectPageCtrl for the project page
  */
-ProjectController.$inject = [
+ProjectPageController.$inject = [
     '$scope'
 ];
 
-function ProjectController($scope) {
-    console.log('project page');
+function ProjectPageController($scope) {
+
 }

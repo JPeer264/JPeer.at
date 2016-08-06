@@ -16,5 +16,5 @@ ContactController.$inject = [
 ];
 
 function ContactController($scope) {
-    console.log('Contact page');
+
 }

@@ -19,6 +19,4 @@ ProjectsController.$inject = [
 
 function ProjectsController($scope, contentService) {
     $scope.projects = contentService.testData().projects;
-
-    console.log($scope.projects)
 }
