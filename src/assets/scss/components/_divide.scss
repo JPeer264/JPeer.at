@@ -5,7 +5,6 @@
 .jp-divide {
     @extend .row;
     height: 1px;
-    background: $white;
     border-bottom: $medium-gray solid 1px;
     margin-top: $global-margin * 2;
     margin-bottom: $global-margin * 2;
@@ -13,7 +12,7 @@
 }
 
 .jp-divide__title {
-    background: $white;
+    background: $body-background;
     position: absolute;
     top: -10px;
     left: 20%;
