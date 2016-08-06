@@ -7,14 +7,18 @@ angular
  * @name pages.projects:ProjectsCtrl
  *
  * @requires $scope
+ * @requires service.content
  *
  * @description
  * ProjectsCtrl for the projects page
  */
 ProjectsController.$inject = [
-    '$scope'
+    '$scope',
+    'contentService'
 ];
 
-function ProjectsController($scope) {
-    console.log('projects page');
+function ProjectsController($scope, contentService) {
+    $scope.projects = contentService.testData().projects;
+
+    console.log($scope.projects)
 }

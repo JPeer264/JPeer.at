@@ -1,9 +1,9 @@
 <div class="jp-project">
-    <div>
-        <img src="{{ img }}" alt="{{ title }}" class="jp-project__image">
+    <div class="jp-project__image flex flex-center">
+        <img data-ng-src="{{ img }}" alt="{{ title }}" class="flex">
     </div>
     <div class="jp-project__content">
-        <a data-ng-href="#/{{ href }}">
+        <a data-ng-href="{{ href }}">
             <div class="jp-project__title" data-ng-bind="title"></div>
         </a>
         <div class="jp-project__tags hide-for-small-only">

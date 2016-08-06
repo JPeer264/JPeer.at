@@ -66,9 +66,9 @@
         </div>
 
         <div class="row">
-            <div class="columns medium-4" data-ng-repeat="i in [1,2,3]">
-                <div data-project data-title="Project #1" data-tags="['webdesign', 'design', 'test']" data-img="http://www.teuflischgenial.de/wp-content/uploads/2012/02/Webdesign_Immobilien.jpg"></div>
-            </div>
+            <div class="columns small-12 medium-6 large-4" data-ng-repeat="project in projects">
+            <div data-project data-title="project.title" data-tags="project.tags" data-img="project.img" data-href="project.href"></div>
+        </div>
         </div>
     </div>
 </div>

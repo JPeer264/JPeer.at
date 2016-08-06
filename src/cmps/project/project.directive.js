@@ -26,10 +26,10 @@ function projectDirective() {
             // priority: 1,
             // terminal: true,
             scope: {
-                title: '@',
+                title: '=',
                 tags: '=',
-                img: '@',
-                href: '@'
+                img: '=',
+                href: '='
             }, // {} = isolate, true = child, false/undefined = no change
             controller: 'ProjectCtrl',
             controllerAs: 'projectCtrl',
