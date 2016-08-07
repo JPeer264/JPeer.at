@@ -1,2 +1,24 @@
 {
+    "PAGES": {
+        "CONTACT": "Kontakt",
+        "ABOUT": "Über mich",
+        "PROJECTS": "Projekte"
+    },
+
+    "SKILL_STATUS": {
+        "FIRST": "Beginner",
+        "SECOND": "Nicht schlecht",
+        "THIRD": "Ehm, wow",
+        "FOURTH": "Status: ÜBERHAMMER"
+    },
+
+    "CONTACT_ME": "Kontaktiere mich!",
+    "RECENT_WORK": "Letzte Arbeiten",
+    "BEST_SKILLS": "Beste Skills",
+    "SKILLS": "Skills",
+
+    "YOUR_NAME": "Dein Name",
+    "YOUR_EMAIL": "Deine Email",
+    "YOUR_MESSAGE": "Deine Nachricht",
+    "SEND": "Senden"
 }

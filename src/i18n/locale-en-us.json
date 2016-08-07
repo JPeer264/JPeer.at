@@ -15,5 +15,10 @@
     "CONTACT_ME": "Contact me!",
     "RECENT_WORK": "Recent work",
     "BEST_SKILLS": "Best skills",
-    "SKILLS": "Skills"
+    "SKILLS": "Skills",
+
+    "YOUR_NAME": "Your name",
+    "YOUR_EMAIL": "Your email",
+    "YOUR_MESSAGE": "Your message",
+    "SEND": "Send"
 }

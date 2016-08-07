@@ -1,7 +1,6 @@
 var CONSTANT = {
     "COOKIE": {
-        "TOKEN": "tkn_u", // tkn_u = token_user
-        "USER_ID": "u_i", // u_i = user_id
+        "PREFLANGUAGE": "lang"
     }
 };
 

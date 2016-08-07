@@ -68,7 +68,9 @@ function LanguageChooserController($scope, $translate, $cookies, CONSTANT) {
      */
     self.setPreferredLanguage = function(langKey) {
         var expireDate = new Date();
+
         expireDate.setMonth(expireDate.getMonth() + 24);
+        self.prefLang = langKey;
 
         $cookies.put(CONSTANT.COOKIE.PREFLANGUAGE, langKey, {'expires': expireDate});
     }

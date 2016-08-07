@@ -15,7 +15,7 @@ function languageChooserDirective() {
             // name: '',
             // priority: 1,
             // terminal: true,
-            scope: {}, // {} = isolate, true = child, false/undefined = no change
+            // scope: {}, // {} = isolate, true = child, false/undefined = no change
             controller: 'LanguageChooserCtrl',
             controllerAs: 'langChooser',
             // require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
@@ -26,6 +26,20 @@ function languageChooserDirective() {
             // transclude: true,
             // compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
             link: function(scope, iElm, iAttrs, controller) {
+                var that = this;
+                var preferredLanguage = controller.getPreferredLanguage();
+                var $root = $('.jp-languagechooser');
+
+                controller.changeLang(preferredLanguage);
+
+                $('.jp-languagechooser a').click(function (e) {
+                    e.preventDefault();
+
+                    var $this = $(this)
+                    var langKey = $this.data('lang');
+
+                    controller.changeLang(langKey);
+                });
             }
         };
 };
