@@ -1,0 +1,10 @@
+// ================
+// BUTTON COMPONENT
+// ================
+
+.jp-button {
+    background-color: $primary-color;
+    color: $white;
+    padding: ($global-padding / 2) $global-padding;
+    border-radius: 2px;
+}
