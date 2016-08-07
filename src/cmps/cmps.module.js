@@ -12,4 +12,6 @@ angular.module('cmps', [
     'cmps.skills',
     'cmps.slider',
     'cmps.timeline',
+    'cmps.mountains',
+    'cmps.myServices',
 ]);
