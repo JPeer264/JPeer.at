@@ -50,7 +50,7 @@ $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #2B3C4D,
-  secondary: rgba(#2B3C4D, .4),
+  secondary: lighten(#2B3C4D, 55%),
   success: #3adb76,
   warning: #ffae00,
   alert: #ec5840,

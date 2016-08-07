@@ -1,13 +1,58 @@
 // =================
 // SECTION COMPONENT
 // =================
+$section-bubble-height: 200px;
 
 .jp-section {
     background: $secondary-color;
 }
 
+.jp-section--white {
+    background: $white;
+}
+
+.jp-section--bubble-down {
+    position: relative;
+    margin-bottom: ($section-bubble-height / 2) + 30px;
+
+    &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        left: -25%;
+        bottom: (-$section-bubble-height / 2);
+        height: $section-bubble-height;
+        width: 150%;
+        border-radius: 50%;
+        background: inherit;
+        z-index: -1;
+    }
+}
+
+.jp-section--bubble-up {
+    position: relative;
+    margin-top: ($section-bubble-height / 2) + 30px;
+
+    &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: -25%;
+        top: (-$section-bubble-height / 2);
+        height: $section-bubble-height;
+        width: 150%;
+        border-radius: 50%;
+        background: inherit;
+        z-index: -1;
+    }
+}
+
 .jp-section__inner {
     padding: $global-padding;
+}
+
+.jp-section__inner--contact {
+    padding: ($global-padding * 4) 0
 }
 
 .jp-section--quote {
