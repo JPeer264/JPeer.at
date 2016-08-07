@@ -19,6 +19,18 @@ body, html {
     min-width : 320px;
 }
 
+.jp-hidden {
+    display: none !important;
+}
+
+a {
+    color: darken($secondary-color, 40%);
+}
+
+.jp-body {
+    overflow-x: hidden;
+}
+
 .flex {
     display: flex;
     justify-content: space-between;

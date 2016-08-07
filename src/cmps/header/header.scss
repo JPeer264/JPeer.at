@@ -4,7 +4,7 @@
 
 .jp-header {
 	background: $primary-color;
-	height: 70px;
+	height: $header-height;
 	color: $white;
 
 	a {
@@ -24,6 +24,6 @@
 
 @media #{$small-only} {
 	.jp-header {
-		height: 50px;
+		height: $header-height-small;
 	}
 }

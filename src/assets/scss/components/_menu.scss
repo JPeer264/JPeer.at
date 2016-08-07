@@ -38,3 +38,34 @@
     background: $white;
     color: $primary-color !important;
 }
+
+@media #{$small-only} {
+    .jp-menu__main {
+        width: 100%;
+        position: absolute;
+        top: $header-height-small;
+        left: 0;
+        border-bottom: 5px solid $primary-color;
+        background: $primary-color;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .5s;
+        z-index: 1;
+
+        a, a:hover, a:last-child, a:first-child {
+            border-radius: 0;
+        }
+
+        .jp-menu__list-item {
+            padding: 1.5em;
+            width: 100%;
+            display: block;
+            border: 0;
+            text-align: center;
+        }
+    }
+
+    .jp-menu__main--active {
+        max-height: 300px;
+    }
+}

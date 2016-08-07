@@ -67,7 +67,7 @@ function contentService($rootScope, $http) {
                 {
                     title: 'JPeer.at',
                     href: '/',
-                    img: 'assets/img/me_bw.png',
+                    img: 'assets/img/github-logo.png',
                     tags: [
                         'wordpress',
                         'design',
@@ -76,8 +76,8 @@ function contentService($rootScope, $http) {
                 },
                 {
                     title: 'SchwarzKönig',
-                    href: '#schwarz-koenig',
-                    img: 'https://www.nyfa.edu/student-resources/wp-content/uploads/2014/06/Landscape-Sunset.jpg',
+                    href: 'http://www.schwarz-koenig.at',
+                    img: 'assets/img/responsive-default.png',
                     tags: [
                         'wordpress',
                         'design',
@@ -86,8 +86,8 @@ function contentService($rootScope, $http) {
                 },
                 {
                     title: 'et-grunt',
-                    href: '#et-grunt',
-                    img: 'assets/img/me_bw.png',
+                    href: '#https://github.com/JPeer264/et-grunt',
+                    img: 'assets/img/github-logo.png',
                     tags: [
                         'nodejs',
                         'grunt'
@@ -95,10 +95,48 @@ function contentService($rootScope, $http) {
                 },
                 {
                     title: 'hasten prototype',
-                    href: '#hasten',
-                    img: 'assets/img/me_bw.png',
+                    href: '#https://github.com/JPeer264/hasten',
+                    img: 'assets/img/github-logo.png',
                     tags: [
                         'nodejs'
+                    ]
+                },
+                {
+                    title: 'Somnia',
+                    href: '#http://www.prazna.at/',
+                    img: 'assets/img/responsive-default.png',
+                    tags: [
+                        '48h project',
+                        'design',
+                        'concept'
+                    ]
+                },
+                {
+                    title: 'Prazna Bikes',
+                    href: '#http://www.prazna.at/',
+                    img: 'assets/img/responsive-default.png',
+                    tags: [
+                        'joomla',
+                        'design'
+                    ]
+                },
+                {
+                    title: 'Portal Bee',
+                    href: '#',
+                    img: 'assets/img/portal-bee.png',
+                    tags: [
+                        'photography',
+                        'canon'
+                    ]
+                },
+                {
+                    title: 'Volxpop',
+                    href: '#http://www.volxpop-music.at/',
+                    img: 'assets/img/responsive-default.png',
+                    tags: [
+                        'wordpress',
+                        'design',
+                        'concept'
                     ]
                 }
             ]

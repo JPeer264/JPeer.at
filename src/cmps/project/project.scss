@@ -3,9 +3,9 @@
 // ==============
 
 .jp-project {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: $box-shadow;
     border-radius: 2px;
-    margin-bottom: $global-margin;
+    margin-bottom: $global-margin * 2;
     background: $white;
 }
 
@@ -14,9 +14,10 @@
 }
 
 .jp-project__image {
-    // @extend .flex;
-
     height: 200px;
+    margin: 0 auto;
+    padding: ($global-padding / 2);
+    padding-bottom: 0;
     overflow: hidden;
 
     img {
@@ -48,5 +49,44 @@
 
     &:nth-of-type(1) {
         margin-left: 0;
+    }
+}
+
+.jp-project__tag--overflow {
+    cursor: pointer;
+    position: relative;
+
+    &:hover .jp-project__overflow-text {
+        display: block;
+        opacity: 1;
+        transition: opacity .5s;
+    }
+}
+
+.jp-project__overflow-text {
+    display: none;
+    padding: ($global-padding / 3) ($global-padding / 2);
+    position: absolute;
+    right: 0;
+    top: -2.5rem;
+    background: $black;
+    color: $white;
+    opacity: 0;
+    white-space: nowrap;
+    font-size: .8rem;
+    text-align: center;
+
+    transition: opacity .5s;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: $black;
+        position: absolute;
+        transform: rotate(45deg);
+        right: 7px;
+        bottom: -5px;
     }
 }

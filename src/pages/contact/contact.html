@@ -1,3 +1,29 @@
-<div>
-    Contact page
+<div class="jp-contact-page">
+    <section class="jp-section jp-section--white jp-section--bubble-down">
+        <div class="jp-section__inner jp-section__inner--contact">
+            <div data-my-services></div>
+        </div>
+    </section>
+    <form data-ng-submit="">
+        <div class="column">
+            <div class="row jp-form">
+                <div class="columns small-12 medium-6">
+                    <label for="name" class="jp-form__label" data-translate="YOUR_NAME" required></label>
+                    <input type="text" id="name" class="jp-form__input">
+                </div>
+                <div class="columns small-12 medium-6">
+                    <label for="email" class="jp-form__label" data-translate="YOUR_EMAIL" required></label>
+                    <input type="email" id="email" class="jp-form__input">
+                </div>
+                <div class="columns small-12">
+                    <label for="message" class="jp-form__label" data-translate="YOUR_MESSAGE" required></label>
+                    <textarea id="message" class="jp-form__textarea"></textarea>
+                </div>
+                <div class="columns small-12">
+                    <button class="jp-button" type="submit" data-translate="SEND"></button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div data-mountains></div>
 </div>

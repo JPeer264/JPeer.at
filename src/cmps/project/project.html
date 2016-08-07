@@ -1,6 +1,6 @@
 <div class="jp-project">
-    <div class="jp-project__image flex flex-center">
-        <img data-ng-src="{{ img }}" alt="{{ title }}" class="flex">
+    <div class="jp-project__image">
+        <img data-ng-src="{{ img }}" target="_blank" alt="{{ title }}" class="flex">
     </div>
     <div class="jp-project__content">
         <a data-ng-href="{{ href }}">
@@ -8,6 +8,11 @@
         </a>
         <div class="jp-project__tags hide-for-small-only">
             <div class="jp-project__tag" data-ng-repeat="tag in tags" data-ng-bind="tag"></div>
+            <div class="jp-project__tag jp-project__tag--overflow jp-hidden">
+                <span>+</span>
+                <div class="jp-project__overflow-text"></div>
+            </div>
         </div>
+        <p>
     </div>
 </div>

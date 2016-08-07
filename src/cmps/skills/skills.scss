@@ -23,7 +23,7 @@ $skill-margin: (100% - ($skill-padding-right)) / ($skill-amount-text - 1);
     position: absolute;
     right: 0;
     top: - ($global-margin * 2);
-    background: $white;
+    background: $body-background;
     font-size: 1rem;
     line-height: 1rem;
 }

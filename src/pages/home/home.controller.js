@@ -19,4 +19,5 @@ HomeController.$inject = [
 
 function HomeController($scope, contentService) {
     $scope.skills = (contentService.testData()).skills;
+    $scope.projects = (contentService.testData().projects).slice(0, 3);
 }
