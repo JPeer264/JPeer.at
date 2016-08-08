@@ -58,9 +58,9 @@ module.exports = function(grunt) {
                 files: {
                 	css: '<%= paths.tmp.folder.assets.csss %>/*.css',
 					instrumented: [
-						'<%=   paths.tmp.folder.tests.instrumented   %>/**/*.modules.js',
-						'<%=   paths.tmp.folder.tests.instrumented   %>/**/*.directives.js',
-						'<%=   paths.tmp.folder.tests.instrumented   %>/**/*.class.js',
+						'<%=   paths.tmp.folder.tests.instrumented   %>/**/*.module.js',
+						'<%=   paths.tmp.folder.tests.instrumented   %>/**/*.directive.js',
+						'<%=   paths.tmp.folder.tests.instrumented   %>/**/*.controller.js',
 						'<%=   paths.tmp.folder.tests.instrumented   %>/**/*.js',
 					]
                 }
@@ -578,7 +578,9 @@ grunt.config.merge(loadConfig('./config/grunt/'));
 				'connect:reports'
 			],
 			ci: [
+				'clean:tests',
 				'copy:tests',
+				'bower_concat',
 				'instrument',
 				'concat:tests',
 				'mocha:report'
