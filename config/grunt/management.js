@@ -161,6 +161,10 @@ module.exports = {
             src: '<%= paths.cache.scss %>'
         },
 
+        tests: {
+            src: '<%= paths.tmp.folder.tests.base %>'
+        },
+
         createdSassByGrunt: {
             src: [
                 '<%= paths.src.folder.assets.scss %>/createdFileByGrunt.scss',
