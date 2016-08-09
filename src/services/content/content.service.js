@@ -61,7 +61,7 @@ function contentService($rootScope, $http) {
                     type: 'design',
                     framework: false,
                 },
-            ], // skills end
+            ], // /skills
 
             projects: [
                 {
@@ -139,7 +139,18 @@ function contentService($rootScope, $http) {
                         'concept'
                     ]
                 }
-            ]
+            ], // /projects
+
+            slider: [
+               {
+                    href: 'assets/img/slider/hoverfly.jpg',
+                    alt: 'Hoverfly slider'
+               },
+               {
+                    href: 'assets/img/slider/fish.jpg',
+                    alt: 'Fish slider'
+               }
+            ] // /slider
         }
     };
 }

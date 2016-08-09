@@ -30,15 +30,19 @@ function sliderDirective() {
                 // @todo add arrows
                 // @todo add index position on bottom
                 var self = this;
+                var index = 0;
                 var options = {
                     interval: 10000
                 };
-                var $slider = $('.jp-slider');
-                var $items = $('.jp-slider__items');
-                var $item = $('.jp-slider__item');
-                var index = 0;
+                var $slider;
+                var $items;
+                var $item;
 
                 setInterval(function() {
+                    $slider = $('.jp-slider');
+                    $items = $('.jp-slider__items');
+                    $item = $('.jp-slider__item');
+
                     next();
                 }, options.interval);
 
