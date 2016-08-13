@@ -11,13 +11,17 @@ factory('RevealService', RevealService);
  * @ngdoc factory
  * @name service.reveal:RevealService
  *
+ * @requires $rootScope
+ * @requires $timeout
+ *
  * @description
  */
 RevealService.$inject = [
-'$rootScope'
+    '$rootScope',
+    '$timeout'
 ];
 
-function RevealService ($rootScope) {
+function RevealService ($rootScope, $timeout) {
     function RevealService () {
         var self = this;
 
@@ -71,12 +75,17 @@ function RevealService ($rootScope) {
         var windowHeight = $window.height();
         var scroll;
 
-        $(document).scroll(function () {
-            var thisOffsetTop = $trigger.offset().top;
-            var thisPosition = $trigger.position();
-            self.scroll = $window.scrollTop();
+        // call before even scrolled
+        if (typeof cb === 'function') cb($trigger, self);
 
-            if (typeof cb === 'function') cb($trigger, self);
+        $(document).scroll(function () {
+            $timeout(function () {
+                var thisOffsetTop = $trigger.offset().top;
+                var thisPosition = $trigger.position();
+                self.scroll = $window.scrollTop();
+
+                if (typeof cb === 'function') cb($trigger, self);
+            }, 500);
         });
     }
 
