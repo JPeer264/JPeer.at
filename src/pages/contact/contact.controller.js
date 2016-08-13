@@ -1,20 +1,36 @@
 angular
 	.module('pages.contact')
-	.controller('ContactCtrl', ContactController);
+	.controller('ContactPageCtrl', ContactPageController);
 
 /**
  * @ngdoc controller
- * @name pages.contact:ContactCtrl
+ * @name pages.contact:ContactPageCtrl
  *
  * @requires $scope
+ * @requires $http
  *
  * @description
- * ContactCtrl for the contact page
+ * ContactPageCtrl for the contact page
  */
-ContactController.$inject = [
-    '$scope'
+ContactPageController.$inject = [
+    '$scope',
+    '$http'
 ];
 
-function ContactController($scope) {
+function ContactPageController($scope, $http) {
 
+    $scope.isSent = false;
+
+    $scope.send = function () {
+        return $http({
+            url: 'http://mail.jpeer.at/send/',
+            method: 'POST',
+            data: $.param($scope.contact)
+        }).then(function (data) {
+            // todo disable form and inputs
+            $scope.isSent = true;
+        }, function (err){
+            if (err) console.log(err);
+        });
+    }
 }

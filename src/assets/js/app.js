@@ -28,12 +28,15 @@ config.$inject = [
     '$locationProvider',
     '$urlRouterProvider',
     '$translateProvider',
+    '$httpProvider'
 ];
 
-function config($stateProvider, $locationProvider, $urlRouterProvider, $translateProvider) {
+function config($stateProvider, $locationProvider, $urlRouterProvider, $translateProvider, $httpProvider) {
     // redirect to home state when we call the page without route information
     // activate in proudction and set mod_rewrite to index.html
     $locationProvider.html5Mode(false);
+
+    $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 
     // activate translation
     $translateProvider.useStaticFilesLoader({
@@ -128,7 +131,7 @@ function config($stateProvider, $locationProvider, $urlRouterProvider, $translat
                 },
                 main: {
                     templateUrl: 'pages/contact/contact.html',
-                    controller: 'ContactCtrl'
+                    controller: 'ContactPageCtrl'
                 },
                 footer: {
                     template: '<div data-footer></div>'

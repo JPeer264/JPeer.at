@@ -40,3 +40,13 @@
     line-height: 1;
     text-transform: uppercase;
 }
+
+.jp-form__success {
+    padding: 0.5em;
+    font-weight: 800;
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: $box-shadow;
+    background: $success-color;
+    color: white;
+}
