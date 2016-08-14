@@ -12,7 +12,7 @@
 module.exports = {
 	eslint: {
 		options: {
-			config: 'config/eslint/.eslintrc',
+			configFile: './config/eslint/.eslintrc',
 		},
 
 		// lint files in /src
