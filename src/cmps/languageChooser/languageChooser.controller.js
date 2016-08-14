@@ -53,7 +53,7 @@ function LanguageChooserController($scope, $translate, $cookies, CONSTANT) {
      */
     self.getPreferredLanguage = function() {
         return $cookies.get(CONSTANT.COOKIE.PREFLANGUAGE) || 'en-us';
-    }
+    };
 
     /**
      * @ngdoc method
@@ -73,7 +73,7 @@ function LanguageChooserController($scope, $translate, $cookies, CONSTANT) {
         self.prefLang = langKey;
 
         $cookies.put(CONSTANT.COOKIE.PREFLANGUAGE, langKey, {'expires': expireDate});
-    }
+    };
 
     /**
      * @ngdoc property

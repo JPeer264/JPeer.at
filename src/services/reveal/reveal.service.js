@@ -8,7 +8,7 @@ module('service.reveal').
 factory('RevealService', RevealService);
 
 /**
- * @ngdoc factory
+ * @ngdoc service
  * @name service.reveal:RevealService
  *
  * @requires $rootScope
@@ -31,12 +31,22 @@ function RevealService ($rootScope, $timeout) {
     }
 
     RevealService.prototype.defaults = {
-        triggerHeight: ($(window).height()) * 0.8,
-        delayedTriggerHeight: 0
-    }
+        triggerHeight: ($(window).height()) * 0.8
+    };
 
     /**
+     * @ngdoc method
+     * @name reveal
+     * @methodOf service.reveal:RevealService
      *
+     * @param {Object} options* optional - the options
+     * @property {number} triggerHeight the height when it should be triggered
+     * @param {Object} $trigger jQuery trigger
+     * @param {Object} beforeCb the callback before the reveal
+     * @param {Object} afterCb  the callback after the reveal
+     *
+     * @description
+     * Calls internally the custom function
      */
     RevealService.prototype.reveal = function (options, $trigger, beforeCb, afterCb) {
         var self = this;
@@ -58,8 +68,20 @@ function RevealService ($rootScope, $timeout) {
                 if (typeof afterCb === 'function') afterCb($trigger, self);
             }
         });
-    }
+    };
 
+    /**
+     * @ngdoc method
+     * @name reveal
+     * @methodOf service.reveal:RevealService
+     *
+     * @param {Object} options  the options
+     * @param {Object} $trigger jQuery trigger
+     * @param {Object} cb       the callback before the reveal
+     *
+     * @description
+     * Calls the callback before the scroll and delayed during the scrolling
+     */
     RevealService.prototype.custom = function (options, $trigger, cb) {
         var self = this;
 
@@ -72,7 +94,6 @@ function RevealService ($rootScope, $timeout) {
         self.options = $.extend({}, self.defaults, options);
 
         var $window = $(window);
-        var windowHeight = $window.height();
         var scroll;
 
         // call before even scrolled
@@ -87,7 +108,7 @@ function RevealService ($rootScope, $timeout) {
                 if (typeof cb === 'function') cb($trigger, self);
             }, 500);
         });
-    }
+    };
 
     return RevealService;
 }
