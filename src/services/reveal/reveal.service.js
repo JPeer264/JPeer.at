@@ -1,11 +1,6 @@
-/**
-* service.reveal Module
-*
-* Description
-*/
-angular.
-module('service.reveal').
-factory('RevealService', RevealService);
+angular
+    .module('service.reveal')
+    .factory('RevealService', RevealService);
 
 /**
  * @ngdoc service
@@ -18,7 +13,7 @@ factory('RevealService', RevealService);
  */
 RevealService.$inject = [
     '$rootScope',
-    '$timeout'
+    '$timeout',
 ];
 
 function RevealService ($rootScope, $timeout) {
