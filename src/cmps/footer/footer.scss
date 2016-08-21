@@ -4,8 +4,9 @@
 
 .jp-footer {
 	height: 50px;
-	background: $primary-color;
-	color: $white;
+    margin-top: -1px;
+    background: $primary-color;
+    color: $white;
 
 	.jp-logo {
 		top: -($logo-width / 2);
