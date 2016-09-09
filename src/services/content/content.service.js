@@ -77,7 +77,7 @@ function contentService($rootScope, $http) {
                 {
                     title: 'SchwarzKönig',
                     href: 'http://www.schwarz-koenig.at',
-                    img: 'assets/img/responsive-default.png',
+                    img: 'assets/img/projects/schwarzkoenig.jpg',
                     tags: [
                         'wordpress',
                         'design',
@@ -103,18 +103,19 @@ function contentService($rootScope, $http) {
                 },
                 {
                     title: 'Somnia',
-                    href: '#http://www.prazna.at/',
+                    href: '#http://somnia.jpeer.at/',
                     img: 'assets/img/responsive-default.png',
                     tags: [
                         '48h project',
                         'design',
-                        'concept'
+                        'concept',
+                        'frontend'
                     ]
                 },
                 {
                     title: 'Prazna Bikes',
                     href: '#http://www.prazna.at/',
-                    img: 'assets/img/responsive-default.png',
+                    img: 'assets/img/projects/prazna.jpg',
                     tags: [
                         'joomla',
                         'design'
@@ -122,8 +123,8 @@ function contentService($rootScope, $http) {
                 },
                 {
                     title: 'Portal Bee',
-                    href: '#',
-                    img: 'assets/img/portal-bee.png',
+                    href: 'https://500px.com/photo/75466791/portal-bee-by-jan-peer',
+                    img: 'assets/img/projects/portalbee.jpg',
                     tags: [
                         'photography',
                         'canon'
@@ -131,7 +132,7 @@ function contentService($rootScope, $http) {
                 },
                 {
                     title: 'Volxpop',
-                    href: '#http://www.volxpop-music.at/',
+                    href: 'http://www.volxpop-music.at/',
                     img: 'assets/img/responsive-default.png',
                     tags: [
                         'wordpress',
