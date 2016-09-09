@@ -24,7 +24,7 @@ function CookieInfoController($scope, $cookies, CONSTANT) {
     $scope.checkCookieAccepted = function () {
         var acceptedCookie = $cookies.get(CONSTANT.COOKIE.COOKIE_ACCEPT);
 
-        return acceptedCookie !== '1';
+        return !!acceptedCookie;
     }
 
     $scope.acceptCookies = function () {

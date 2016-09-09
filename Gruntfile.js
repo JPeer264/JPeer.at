@@ -581,6 +581,7 @@ grunt.config.merge(loadConfig('./config/grunt/'));
 				'clean:tests',
 				'copy:tests',
 				'bower_concat',
+				'html2js',
 				'instrument',
 				'concat:tests',
 				'mocha:report'

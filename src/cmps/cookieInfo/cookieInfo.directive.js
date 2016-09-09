@@ -9,7 +9,11 @@ angular
  * @description
  * Generates a single cookieInfo component
  */
-function cookieInfo() {
+cookieInfo.$inject = [
+    '$interval'
+];
+
+function cookieInfo($interval) {
         // Runs during compile
         return {
             // name: '',
@@ -25,7 +29,7 @@ function cookieInfo() {
             // transclude: true,
             // compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
             link: function($scope, iElm, iAttrs, controller) {
-                var timeout = setInterval(function(){
+                var timeout = $interval(function(){
                     $('#cookie-info').css({
                         'bottom': 0
                     })
