@@ -42,16 +42,24 @@ function skillsDirective($timeout, RevealService) {
                 /**
                  * set the width on each skill
                  */
-                var revealSkills = function () {
+                var revealSkills = function (isTransition) {
                     var revealService = new RevealService();
                     var $trigger = $('.jp-skills');
                     var $setWidth = $trigger.find('[data-jp-skill-percent]');
 
+                    isTransition = isTransition === undefined ? true : isTransition;
+
                     revealService.reveal($trigger, function() {
-                        $setWidth.each(function () {
+                        $setWidth.each(function (key) {
                             var $this = $(this);
 
                             $this.width($this.attr('data-jp-skill-percent') + '%');
+
+                            if (isTransition) {
+                                $this.css({
+                                    'transition-delay': (key + 1) / 5 + 's'
+                                });
+                            }
                         });
                     });
                 };

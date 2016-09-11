@@ -26,7 +26,7 @@ function SkillsController($scope, $timeout) {
         self.filterSkills = value;
         $timeout(function () {
             self.resetSkillsWidth();
-            self.revealSkills();
+            self.revealSkills(false);
         }, 0);
     };
 }

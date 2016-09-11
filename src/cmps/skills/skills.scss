@@ -37,11 +37,11 @@ $skill-margin: (100% - ($skill-padding-right)) / ($skill-amount-text - 1);
     background: black;
     transition: width 1s;
 
-    @for $i from 1 through 10 {
-        &:nth-of-type(#{$i}) {
-            transition-delay: #{$i / 5}s;
-        }
-    }
+    // @for $i from 1 through 10 {
+    //     &:nth-of-type(#{$i}) {
+    //         transition-delay: #{$i / 5}s;
+    //     }
+    // }
 }
 
 @include breakpoint(medium up) {
