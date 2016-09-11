@@ -24,7 +24,9 @@ function skillsDirective($timeout, RevealService) {
             // priority: 1,
             // terminal: true,
             scope: {
-                skills: '='
+                skills: '=',
+                maxLength: '&',
+                filterBar: '&'
             }, // {} = isolate, true = child, false/undefined = no change
             controller: 'SkillsCtrl',
             controllerAs: 'skillsCtrl',
@@ -36,12 +38,14 @@ function skillsDirective($timeout, RevealService) {
             // transclude: true,
             // compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
             link: function(scope, iElm, iAttrs, controller) {
-                // @todo check all tags and shorten them into plus if they are too long
-                // @todo add default img if it is empty
+
+                /**
+                 * set the width on each skill
+                 */
                 var revealSkills = function () {
                     var revealService = new RevealService();
                     var $trigger = $('.jp-skills');
-                    var $setWidth = $(document).find('[data-jp-skill-percent]');
+                    var $setWidth = $trigger.find('[data-jp-skill-percent]');
 
                     revealService.reveal($trigger, function() {
                         $setWidth.each(function () {
@@ -50,7 +54,32 @@ function skillsDirective($timeout, RevealService) {
                             $this.width($this.attr('data-jp-skill-percent') + '%');
                         });
                     });
+                };
+
+                /**
+                 * set the transition to initial if a filter is triggered
+                 */
+                var resetSkillsWidth = function () {
+                    var $trigger = $('.jp-skills');
+                    var $setWidth = $trigger.find('[data-jp-skill-percent]');
+
+                    $setWidth.each(function () {
+                        var $this = $(this);
+
+                        $this.css('transition', 'initial');
+                    });
+                };
+
+                // manipulate skills
+                scope.skills = scope.skills.shuffle(iAttrs.maxLength);
+
+                if (iAttrs.filterBar === 'true') {
+                    controller.filterBar = true;
                 }
+
+                // make the function avaiable in the scope
+                controller.revealSkills = revealSkills;
+                controller.resetSkillsWidth = resetSkillsWidth;
 
                 $timeout(revealSkills, 0);
             }
