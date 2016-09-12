@@ -4,13 +4,13 @@
 
 .jp-contact {
     display: block;
-    background: $primary-color;
+    background: mix($primary-color, $secondary-color, 60%);
     color: $white;
     transition: all .5s;
 
     &:hover {
         background: $secondary-color;
-        color: $black;
+        color: $white;
     }
 }
 

@@ -52,7 +52,10 @@ $section-bubble-height: 200px;
 }
 
 .jp-section__inner {
-    padding: $global-padding;
+    // .row values
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 1px;
 }
 
 .jp-section__inner--contact {
@@ -96,7 +99,7 @@ $section-bubble-height: 200px;
         position: absolute;
         top: 0;
         right: 0;
-        background: rgba($secondary-color, 0.5);
+        background: rgba($primary-color-light, 0.5);
         z-index: 0;
     }
 
@@ -138,6 +141,12 @@ $section-bubble-height: 200px;
     }
 }
 
+@media #{$medium-only} {
+    .jp-section__background {
+        padding: $global-padding * 2 $global-padding * 5;
+    }
+}
+
 @media #{$small-only} {
     $section-bubble-height: 70px;
 
@@ -157,5 +166,9 @@ $section-bubble-height: 200px;
             top: (-$section-bubble-height / 2);
             height: $section-bubble-height;
         }
+    }
+
+    .jp-section__background {
+        padding: $global-padding * 1 $global-padding * 1;
     }
 }

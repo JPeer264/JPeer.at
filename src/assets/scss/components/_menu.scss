@@ -15,29 +15,53 @@
 
 .jp-menu__main {
     transition: background .3s, color .3s;
-
-    a:hover {
-        background: darken($white, 20%);
-        color: $primary-color;
-    }
-
-    a:first-child {
-        border-radius: 5px 0 0 5px;
-    }
-
-    a:last-child {
-        border-radius: 0 5px 5px 0;
-    }
 }
 
 .jp-menu__list-item {
 	display: inline-block;
 }
 
-.jp-menu__list-item--active {
-    background: $white;
-    color: $primary-color !important;
+// .jp-menu__list-item--active {
+//     background: $white;
+//     color: $primary-color !important;
+// }
+@media #{$medium-up} {
+    .jp-menu--brackets .jp-menu__list-item {
+        padding: 0 $global-padding;
+        position: relative;
+
+        &:before {
+            content: '{';
+            left: 10px;
+        }
+
+        &:after {
+            content: '}';
+            right: 10px;
+        }
+
+        &:before, &:after {
+            display: block;
+            position: absolute;
+            top: -1px;
+            opacity: 0;
+            transition: opacity 0.5s, right 0.5s, left 0.5s;
+        }
+
+        &:hover, &.jp-menu__list-item--active {
+            &:before {
+                left: 2px;
+                opacity: 1;
+            }
+
+            &:after {
+                right: 2px;
+                opacity: 1;
+            }
+        }
+    }
 }
+
 
 @media #{$small-only} {
     .jp-menu__main {
@@ -67,5 +91,10 @@
 
     .jp-menu__main--active {
         max-height: 300px;
+    }
+
+    .jp-menu--brackets .jp-menu__list-item--active {
+        color: $primary-color;
+        background: $white;
     }
 }

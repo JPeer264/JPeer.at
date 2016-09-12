@@ -2,6 +2,8 @@
 // SLIDER MODULE
 // =============
 
+$ratio: 6/20;
+
 .jp-slider {
     background: $primary-color;
     position: relative;
@@ -11,7 +13,7 @@
     // @extend .row;
     position: relative;
     overflow: hidden;
-    padding-top: 45%;
+    padding-top: percentage($ratio);
 }
 
 .jp-slider__items {
@@ -34,14 +36,21 @@
 }
 
 .jp-slider__item {
+    padding-top: percentage($ratio);
     display: inline-block;
     vertical-align: top;
     width: 100%;
     height: auto;
+    position: relative;
+    overflow: hidden;
     max-height: 400px;
     white-space: normal;
 
     img {
-        width: 100%;
+        max-width: initial;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 }
