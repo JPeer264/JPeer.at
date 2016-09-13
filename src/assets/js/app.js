@@ -6,12 +6,13 @@ var CONSTANT = {
 
 angular.module('jpeer', [
     'ui.router',
+    'ngAnimate',
     'jpeer.templates',
     'ngCookies',
     'pages',
     'service',
     'cmps',
-    'pascalprecht.translate',
+    'pascalprecht.translate'
 ]);
 
 angular

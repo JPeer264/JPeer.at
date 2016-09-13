@@ -60,3 +60,20 @@ ul, ol {
     margin: 0;
     padding: 0;
 }
+
+// animate body
+.ui-main {
+    position: relative;
+    z-index: -1;
+
+    &.ng-enter {
+        margin-top: -20px;
+        opacity: 0;
+        transition: .5s;
+    }
+ 
+    &.ng-enter-active {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
