@@ -12,6 +12,7 @@ module.exports = {
 	instrument: {
 		files: [
 			'<%= paths.src.files.js %>',
+			'<%= paths.tmp.folder.assets.js %>/template.js',
 			'<%= paths.src.ignore.tests %>',
 			'<%= paths.src.ignore.couldBeVendor %>'
 		],

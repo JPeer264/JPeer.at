@@ -21,13 +21,18 @@
     <script type="text/javascript" charset="utf-8">
         // Setup chai
         var expect = chai.expect;
+        var should = chai.should;
     </script>
 
     <!-- Include anything you want to test -->
     <script src="js/vendor.js" type="text/javascript" charset="utf-8"></script>
+    <script src="config/js/angular-mocks.js" type="text/javascript" charset="utf-8"></script>
+    <script src="config/js/angular-scenario.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/instrument.js" type="text/javascript" charset="utf-8"></script>
 
     <!-- Spec files -->
+    <script src="config/js/specdefaults/overwriteTranslate.spec.js" type="text/javascript" charset="utf-8"></script>
+    <script src="config/js/specdefaults/globalVar.spec.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/tests.js" type="text/javascript" charset="utf-8"></script>
 
     <!-- run mocha -->
