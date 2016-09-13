@@ -39,6 +39,13 @@
         "GRAZ": "Currently I am an intern at <a href=\"{{ href }}\" target=\"_blank\">{{ text }}</a>"
     },
 
+    "FILTER": {
+        "ALL": "All",
+        "PROGRAMMING": "Programming",
+        "FRAMEWORK": "Framework",
+        "DESIGN": "Design"
+    },
+
     "YOUR_NAME": "Your name",
     "YOUR_EMAIL": "Your email",
     "YOUR_MESSAGE": "Your message",

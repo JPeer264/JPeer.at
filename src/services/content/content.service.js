@@ -47,12 +47,24 @@ function contentService($rootScope, $http) {
                     color: '#7091CB'
                 },
                 {
+                    skill: 'NodeJS',
+                    percent: 62,
+                    type: 'programming',
+                    framework: false,
+                    color: '#83cd29'
+                },
+                {
                     skill: 'Laravel',
                     percent: 40,
                     type: 'programming',
-                    framework: {
-                        type: 'php'
-                    },
+                    framework: true,
+                    color: '#f4645f'
+                },
+                {
+                    skill: 'AngularJS',
+                    percent: 70,
+                    type: 'programming',
+                    framework: true,
                     color: '#f4645f'
                 },
                 {
@@ -60,6 +72,27 @@ function contentService($rootScope, $http) {
                     percent: 68,
                     type: 'design',
                     framework: false,
+                },
+                {
+                    skill: 'Photoshop',
+                    percent: 40,
+                    type: 'design',
+                    framework: false,
+                    color: '#2c3674'
+                },
+                {
+                    skill: 'Illustrator',
+                    percent: 21,
+                    type: 'design',
+                    framework: false,
+                    color: '#ff9101'
+                },
+                {
+                    skill: 'Sketch',
+                    percent: 60,
+                    type: 'design',
+                    framework: false,
+                    color: '#061524'
                 },
             ], // /skills
 

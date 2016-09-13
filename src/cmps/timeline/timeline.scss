@@ -126,7 +126,7 @@
     }
 
     .jp-timeline__mask {
-        background-image: linear-gradient(top, transparent 60%, $body-background 60%);
+        background-image: linear-gradient(to bottom, transparent 60%, $body-background 60%);
         background-position: ($skill-margin * 0) 60%;
         background-attachment: fixed;
         transition: padding .5s, opacity .5s;
