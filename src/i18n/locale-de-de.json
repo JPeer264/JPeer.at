@@ -35,6 +35,13 @@
         "GRAZ": "Derzeit bin ich Praktikant bei <a href=\"{{ href }}\" target=\"_blank\">{{ text }}</a>"
     },
 
+    "FILTER": {
+        "ALL": "Alle",
+        "PROGRAMMING": "Programmieren",
+        "FRAMEWORK": "Framework",
+        "DESIGN": "Design"
+    },
+
     "YOUR_NAME": "Dein Name",
     "YOUR_EMAIL": "Deine Email",
     "YOUR_MESSAGE": "Deine Nachricht",
