@@ -63,17 +63,12 @@ ul, ol {
 
 // animate body
 .ui-main {
-    position: relative;
-    z-index: -1;
-
     &.ng-enter {
-        transform: translateY(-20px);
         opacity: 0;
-        transition: .5s;
+        transition: 1s;
     }
  
     &.ng-enter-active {
         opacity: 1;
-        transform: translateY(0);
     }
 }
