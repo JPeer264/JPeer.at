@@ -14,4 +14,5 @@ angular.module('cmps', [
     'cmps.timeline',
     'cmps.mountains',
     'cmps.myServices',
+    'cmps.pictureArray',
 ]);
