@@ -44,7 +44,7 @@ $skill-margin: (100% - ($skill-padding-right)) / ($skill-amount-text - 1);
     // }
 }
 
-@include breakpoint(medium up) {
+@media #{$medium-up} {
     .jp-skills {
         padding-right: $skill-padding-right;
         padding-bottom: $global-padding;
@@ -81,3 +81,9 @@ $skill-margin: (100% - ($skill-padding-right)) / ($skill-amount-text - 1);
         }
     }
 }
+
+@media #{$small-only} {
+    .jp-skills__title {
+        left: $global-margin;
+    }
+} 
