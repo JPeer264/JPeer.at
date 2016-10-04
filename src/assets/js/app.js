@@ -35,7 +35,7 @@ config.$inject = [
 function config($stateProvider, $locationProvider, $urlRouterProvider, $translateProvider, $httpProvider) {
     // redirect to home state when we call the page without route information
     // activate in proudction and set mod_rewrite to index.html
-    $locationProvider.html5Mode(false);
+    $locationProvider.html5Mode(true);
 
     $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 
