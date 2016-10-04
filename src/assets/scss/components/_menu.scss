@@ -21,6 +21,11 @@
 	display: inline-block;
 }
 
+.jp-menu__hamburger {
+    cursor: pointer;
+    font-weight: 800;
+}
+
 // .jp-menu__list-item--active {
 //     background: $white;
 //     color: $primary-color !important;
@@ -80,7 +85,7 @@
             border-radius: 0;
         }
 
-        .jp-menu__list-item {
+        > ul .jp-menu__list-item {
             padding: 1.5em;
             width: 100%;
             display: block;
