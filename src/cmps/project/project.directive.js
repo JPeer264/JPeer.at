@@ -50,7 +50,6 @@ function projectDirective() {
                 }, 0);
 
                 $(window).resize(function () {
-                    console.log('resize')
                     hideTooLongTags();
                 });
 
