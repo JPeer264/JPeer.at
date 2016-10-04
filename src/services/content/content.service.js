@@ -99,7 +99,7 @@ function contentService($rootScope, $http) {
             projects: [
                 {
                     title: 'JPeer.at',
-                    href: '/',
+                    href: 'https://github.com/JPeer264/JPeer.at',
                     img: 'assets/img/github-logo.png',
                     tags: [
                         'wordpress',
@@ -119,7 +119,7 @@ function contentService($rootScope, $http) {
                 },
                 {
                     title: 'et-grunt',
-                    href: '#https://github.com/JPeer264/et-grunt',
+                    href: 'https://github.com/JPeer264/et-grunt',
                     img: 'assets/img/github-logo.png',
                     tags: [
                         'nodejs',
@@ -128,7 +128,7 @@ function contentService($rootScope, $http) {
                 },
                 {
                     title: 'hasten prototype',
-                    href: '#https://github.com/JPeer264/hasten',
+                    href: 'https://github.com/JPeer264/hasten',
                     img: 'assets/img/github-logo.png',
                     tags: [
                         'nodejs'
@@ -147,7 +147,7 @@ function contentService($rootScope, $http) {
                 },
                 {
                     title: 'Prazna Bikes',
-                    href: '#http://www.prazna.at/',
+                    href: 'http://www.prazna.at/',
                     img: 'assets/img/projects/prazna.jpg',
                     tags: [
                         'joomla',
@@ -166,7 +166,7 @@ function contentService($rootScope, $http) {
                 {
                     title: 'Volxpop',
                     href: 'http://www.volxpop-music.at/',
-                    img: 'assets/img/responsive-default.png',
+                    img: 'assets/img/projects/volxpop.jpg',
                     tags: [
                         'wordpress',
                         'design',
