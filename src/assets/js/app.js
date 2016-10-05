@@ -43,6 +43,7 @@ function config($stateProvider, $locationProvider, $urlRouterProvider, $translat
     $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 
     // activate translation
+    $translateProvider.useSanitizeValueStrategy('escaped');
     $translateProvider.useStaticFilesLoader({
         prefix: 'i18n/locale-',// path to translations files
         suffix: '.json'// suffix, currently- extension of the translations
