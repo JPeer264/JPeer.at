@@ -29,7 +29,8 @@ function projectDirective() {
                 title: '=',
                 tags: '=',
                 img: '=',
-                href: '='
+                href: '=',
+                cover: '='
             }, // {} = isolate, true = child, false/undefined = no change
             controller: 'ProjectCtrl',
             controllerAs: 'projectCtrl',

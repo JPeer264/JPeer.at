@@ -11,6 +11,9 @@
 
 .jp-project__title {
     font-weight: 600;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .jp-project__image {
@@ -20,12 +23,22 @@
     padding-bottom: 0;
     overflow: hidden;
 
-    img {
-        // height: 200px;
-        max-height: 100%;
-        max-width: 100%;
-        margin: 0 auto;
+    a {
+        height: 100%;
+        display: block;
     }
+}
+
+.jp-project__background-image {
+    height: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+}
+
+.jp-project__background-image--cover {
+    background-size: cover;
 }
 
 .jp-project__content {

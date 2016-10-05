@@ -15,5 +15,6 @@ angular.module('cmps', [
     'cmps.mountains',
     'cmps.myServices',
     'cmps.skillsFilter',
+    'cmps.backImg',
     'cmps.pictureQuote'
 ]);

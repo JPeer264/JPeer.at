@@ -20,18 +20,38 @@ ProjectsController.$inject = [
 ];
 
 function ProjectsController($scope, contentService, pxService) {
-    // @todo put right format from 500px to $scope.projects
     // @todo shuffle $scope.projects with 500px pictures in it
     pxService.getPictures().then(function (data, err) {
-        var pxImages;
+        var pxObjects;
+        var projects;
 
+        // bail fast
         if (err) console.log(err);
 
-        pxImages = data.data.photos;
+        pxObjects = data.data.photos;
+        projects = contentService.testData().projects;
 
-        console.log(pxImages);
+        // iterate over the 500pxObjects
+        for (var pxObjectKey = 0; pxObjectKey < pxObjects.length; pxObjectKey++) {
+            var pxObject        = pxObjects[pxObjectKey];
+            var projectObject   = {};
+            
+            // add values like a normal project
+            projectObject.title = pxObject.name;
+            projectObject.img   = pxObject.image_url;
+            projectObject.href  = 'https://www.500px.com' + pxObject.url;
+            projectObject.tags  = [
+                '500px',
+                'photography',
+                'canon'
+            ];
 
-        $scope.projects = contentService.testData().projects;
+            // combine existing projects and 500pxImages - shuffle them
+            projects.push(projectObject);
+        }
+
+
+        $scope.projects = projects.shuffle();
     });
 
 }

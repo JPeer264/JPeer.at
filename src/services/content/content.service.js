@@ -105,7 +105,8 @@ function contentService($rootScope, $http) {
                         'wordpress',
                         'design',
                         'angular'
-                    ]
+                    ],
+                    cover: false
                 },
                 {
                     title: 'SchwarzKönig',
@@ -115,7 +116,8 @@ function contentService($rootScope, $http) {
                         'wordpress',
                         'design',
                         'deploy'
-                    ]
+                    ],
+                    cover: false
                 },
                 {
                     title: 'et-grunt',
@@ -124,7 +126,8 @@ function contentService($rootScope, $http) {
                     tags: [
                         'nodejs',
                         'grunt'
-                    ]
+                    ],
+                    cover: false
                 },
                 {
                     title: 'hasten prototype',
@@ -132,7 +135,8 @@ function contentService($rootScope, $http) {
                     img: 'assets/img/github-logo.png',
                     tags: [
                         'nodejs'
-                    ]
+                    ],
+                    cover: false
                 },
                 {
                     title: 'Somnia',
@@ -143,7 +147,8 @@ function contentService($rootScope, $http) {
                         'design',
                         'concept',
                         'frontend'
-                    ]
+                    ],
+                    cover: false
                 },
                 {
                     title: 'Prazna Bikes',
@@ -152,15 +157,6 @@ function contentService($rootScope, $http) {
                     tags: [
                         'joomla',
                         'design'
-                    ]
-                },
-                {
-                    title: 'Portal Bee',
-                    href: 'https://500px.com/photo/75466791/portal-bee-by-jan-peer',
-                    img: 'assets/img/projects/portalbee.jpg',
-                    tags: [
-                        'photography',
-                        'canon'
                     ]
                 },
                 {
