@@ -1,6 +1,9 @@
 var CONSTANT = {
     "COOKIE": {
         "PREFLANGUAGE": "lang"
+    },
+    "500PX": {
+        "CONSUMER_KEY": "mYA1JvH8cgCSLqf058mERl9yyUUGdjPCDhfkMMGv"
     }
 };
 

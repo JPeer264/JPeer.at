@@ -12,7 +12,7 @@ angular
  * The project component
  */
 ProjectController.$inject = [
-    '$scope',
+    '$scope'
 ];
 
 function ProjectController($scope) {
