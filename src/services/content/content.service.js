@@ -168,6 +168,15 @@ function contentService($rootScope, $http) {
                         'design',
                         'concept'
                     ]
+                },
+                {
+                    title: 'ProtonJS',
+                    href: 'https://a-jie.github.io/Proton/',
+                    img: 'assets/img/github-logo.png',
+                    tags: [
+                        'documentation'
+                    ],
+                    cover: false
                 }
             ], // /projects
 
