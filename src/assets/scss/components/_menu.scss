@@ -19,6 +19,13 @@
 
 .jp-menu__list-item {
 	display: inline-block;
+    float: left;
+
+    a {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
 }
 
 .jp-menu__hamburger {
@@ -26,10 +33,6 @@
     font-weight: 800;
 }
 
-// .jp-menu__list-item--active {
-//     background: $white;
-//     color: $primary-color !important;
-// }
 @media #{$medium-up} {
     .jp-menu--brackets .jp-menu__list-item {
         padding: 0 $global-padding;
@@ -86,11 +89,14 @@
         }
 
         > ul .jp-menu__list-item {
-            padding: 1.5em;
             width: 100%;
             display: block;
             border: 0;
             text-align: center;
+
+            a {
+                padding: 1.5em;
+            } 
         }
     }
 
@@ -98,7 +104,7 @@
         max-height: 300px;
     }
 
-    .jp-menu--brackets .jp-menu__list-item--active {
+    .jp-menu--brackets .jp-menu__list-item--active a {
         color: $primary-color;
         background: $white;
     }
