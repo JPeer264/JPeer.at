@@ -23,7 +23,7 @@ function ContactPageController($scope, $http) {
 
     $scope.send = function () {
         return $http({
-            url: 'http://mail.jpeer.at/',
+            url: 'https://mail.jpeer.at/',
             method: 'POST',
             data: $.param($scope.contact)
         }).then(function (data) {
