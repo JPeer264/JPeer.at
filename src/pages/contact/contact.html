@@ -4,13 +4,6 @@
             <div data-my-services></div>
         </div>
     </section>
-    <div class="row jp-form" data-ng-if="isSent">
-        <div class="column">
-            <div class="jp-form__success">
-                <span data-translate="THANK_YOU"></span>
-            </div>
-        </div>
-    </div>
     <div class="row jp-social flex flex-horizontal-center">
         <div class="jp-social__item jp-social--github">
             <a href="https://www.github.com/JPeer264" target="_blank">
@@ -28,6 +21,13 @@
             <a href="https://500px.com/JPeer" target="_blank">
                 <i class="flex flex-center flex-horizontal-center fa fa-500px" aria-hidden="true"></i>
             </a>
+        </div>
+    </div>
+    <div class="row jp-form" data-ng-if="isSent">
+        <div class="column">
+            <div class="jp-form__success">
+                <span data-translate="THANK_YOU"></span>
+            </div>
         </div>
     </div>
     <form name="contact-form" data-ng-submit="send()">
