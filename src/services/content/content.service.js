@@ -111,7 +111,7 @@ function contentService($rootScope, $http) {
                 {
                     title: 'SchwarzKönig',
                     href: 'http://www.schwarz-koenig.at',
-                    img: 'assets/img/projects/schwarzkoenig.jpg',
+                    img: 'assets/img/projects/schwarzkoenig.png',
                     tags: [
                         'wordpress',
                         'design',
@@ -141,7 +141,7 @@ function contentService($rootScope, $http) {
                 {
                     title: 'Somnia',
                     href: '#http://somnia.jpeer.at/',
-                    img: 'assets/img/responsive-default.png',
+                    img: 'assets/img/projects/somnia.jpg',
                     tags: [
                         '48h project',
                         'design',
@@ -175,6 +175,19 @@ function contentService($rootScope, $http) {
                     img: 'assets/img/github-logo.png',
                     tags: [
                         'documentation'
+                    ],
+                    cover: false
+                },
+                {
+                    title: 'Railroad Barcelona',
+                    href: 'https://projects.jpeer.at/railroad/',
+                    img: 'assets/img/projects/railroad.png',
+                    tags: [
+                        'angular',
+                        'lumen',
+                        'database',
+                        'documentation',
+                        'concept'
                     ],
                     cover: false
                 }
