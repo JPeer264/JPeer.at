@@ -55,7 +55,6 @@ $section-bubble-height: 200px;
     // .row values
     max-width: 75rem;
     margin: 0 auto;
-    padding: 1px;
 }
 
 .jp-section__inner--contact {
@@ -113,6 +112,7 @@ $section-bubble-height: 200px;
 .jp-section--quote {
     @extend .row;
     width: 100%;
+    box-shadow: 0 1px 5px rgba(0,0,0,.2);
 
     h1,
     h2,
