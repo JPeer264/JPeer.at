@@ -20,8 +20,8 @@ function timelineDirective(RevealService) {
             // priority: 1,
             // terminal: true,
             // scope: {}, // {} = isolate, true = child, false/undefined = no change
-            controller: 'TimelineCtrl',
-            controllerAs: 'timelineCtrl',
+            // controller: 'TimelineCtrl',
+            // controllerAs: 'timelineCtrl',
             // require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
             // restrict: 'A', // E = Element, A = Attribute, C = Class, M = Comment
             // template: '',

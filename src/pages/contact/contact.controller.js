@@ -32,5 +32,5 @@ function ContactPageController($scope, $http) {
         }, function (err){
             if (err) console.log(err);
         });
-    }
+    };
 }
