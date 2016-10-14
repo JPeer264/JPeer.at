@@ -17,7 +17,22 @@ HomeController.$inject = [
     'contentService'
 ];
 
-function HomeController($scope, contentService) {
+function HomeController ($scope, contentService) {
+    /**
+     * @ngdoc property
+     * @name skills
+     * @propertyOf pages.home:HomeCtrl
+     *
+     * @description prepares the skills for the home page
+     */
     $scope.skills = (contentService.testData()).skills;
-    $scope.projects = (contentService.testData().projects).slice(0, 3);
+
+    /**
+     * @ngdoc property
+     * @name projects
+     * @propertyOf pages.home:HomeCtrl
+     *
+     * @description prepares the projects for the home page
+     */
+    $scope.projects = contentService.testData().projects.slice(0, 3);
 }

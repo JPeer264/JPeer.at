@@ -17,7 +17,7 @@ RevealService.$inject = [
 ];
 
 function RevealService ($rootScope, $timeout) {
-    function RevealService () {
+    function Reveal () {
         var self = this;
 
         self.height = $(document).height();
@@ -25,8 +25,8 @@ function RevealService ($rootScope, $timeout) {
         self.options = {};
     }
 
-    RevealService.prototype.defaults = {
-        triggerHeight: ($(window).height()) * 0.8
+    Reveal.prototype.defaults = {
+        'triggerHeight': $(window).height() * 0.8
     };
 
     /**
@@ -43,23 +43,22 @@ function RevealService ($rootScope, $timeout) {
      * @description
      * Calls internally the custom function
      */
-    RevealService.prototype.reveal = function (options, $trigger, beforeCb, afterCb) {
+    Reveal.prototype.reveal = function (options, $trigger, beforeCb, afterCb) {
         var self = this;
 
         if (options instanceof $) {
-            afterCb = beforeCb;
-            beforeCb = $trigger;
-            $trigger = options;
-            options = {};
+            afterCb     = beforeCb;
+            beforeCb    = $trigger;
+            $trigger    = options;
+            options     = {};
         }
 
-        self.custom(options, $trigger, function() {
+        self.custom(options, $trigger, function () {
             var thisOffsetTop = $trigger.offset().top;
 
             if (thisOffsetTop - self.options.triggerHeight < self.scroll) {
                 if (typeof beforeCb === 'function') beforeCb($trigger, self);
-            }
-            else {
+            } else {
                 if (typeof afterCb === 'function') afterCb($trigger, self);
             }
         });
@@ -77,8 +76,9 @@ function RevealService ($rootScope, $timeout) {
      * @description
      * Calls the callback before the scroll and delayed during the scrolling
      */
-    RevealService.prototype.custom = function (options, $trigger, cb) {
+    Reveal.prototype.custom = function (options, $trigger, cb) {
         var self = this;
+        var $window;
 
         if (options instanceof $) {
             cb = cb;
@@ -88,16 +88,13 @@ function RevealService ($rootScope, $timeout) {
 
         self.options = $.extend({}, self.defaults, options);
 
-        var $window = $(window);
-        var scroll;
+        $window = $(window);
 
         // call before even scrolled
         if (typeof cb === 'function') cb($trigger, self);
 
         $(document).scroll(function () {
             $timeout(function () {
-                var thisOffsetTop = $trigger.offset().top;
-                var thisPosition = $trigger.position();
                 self.scroll = $window.scrollTop();
 
                 if (typeof cb === 'function') cb($trigger, self);
@@ -105,5 +102,5 @@ function RevealService ($rootScope, $timeout) {
         });
     };
 
-    return RevealService;
+    return Reveal;
 }

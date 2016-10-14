@@ -47,12 +47,12 @@
       "vars": "local",
       "args": "after-used"
     }],
-    "no-use-before-define": 2,       // http://eslint.org/docs/rules/no-use-before-define
+    "no-use-before-define": 0,       // http://eslint.org/docs/rules/no-use-before-define
 
 /**
  * Possible errors
  */
-    "comma-dangle": [2, "always-multiline"],    // http://eslint.org/docs/rules/comma-dangle
+    "comma-dangle": [2, "only-multiline"],    // http://eslint.org/docs/rules/comma-dangle
     "no-cond-assign": [2, "always"], // http://eslint.org/docs/rules/no-cond-assign
     "no-debugger": 1,                // http://eslint.org/docs/rules/no-debugger
     "no-alert": 1,                   // http://eslint.org/docs/rules/no-alert
@@ -103,7 +103,7 @@
     "no-new-wrappers": 2,            // http://eslint.org/docs/rules/no-new-wrappers
     "no-octal": 2,                   // http://eslint.org/docs/rules/no-octal
     "no-octal-escape": 2,            // http://eslint.org/docs/rules/no-octal-escape
-    "no-param-reassign": 2,          // http://eslint.org/docs/rules/no-param-reassign
+    "no-param-reassign": 1,          // http://eslint.org/docs/rules/no-param-reassign
     "no-proto": 2,                   // http://eslint.org/docs/rules/no-proto
     "no-redeclare": 2,               // http://eslint.org/docs/rules/no-redeclare
     "no-return-assign": 2,           // http://eslint.org/docs/rules/no-return-assign
@@ -163,7 +163,7 @@
     }],
     "keyword-spacing": 2,            // http://eslint.org/docs/rules/keyword-spacing
     "space-before-blocks": 2,        // http://eslint.org/docs/rules/space-before-blocks
-    "space-before-function-paren": [2, "never"], // http://eslint.org/docs/rules/space-before-function-paren
+    "space-before-function-paren": [2, "always"], // http://eslint.org/docs/rules/space-before-function-paren
     "space-infix-ops": 2,            // http://eslint.org/docs/rules/space-infix-ops
     "spaced-comment": 2,            // http://eslint.org/docs/rules/spaced-comment
   }
