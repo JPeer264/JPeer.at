@@ -33,13 +33,12 @@ function sliderDirective($timeout, $interval) {
         replace: true,
         // transclude: true,
         // compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
-        link: function(scope, iElm, iAttrs, controller) {
+        link: function() {
             // @todo improve slider and make more functions - e.g. clickable
             // @todo add arrows
             // @todo add index position on bottom
             var self = this;
             var cachedIndex = 0;
-            var index = 0;
             var options = {
                 interval: 10000
             };

@@ -26,7 +26,7 @@ function RevealService ($rootScope, $timeout) {
     }
 
     Reveal.prototype.defaults = {
-        'triggerHeight': $(window).height() * 0.8
+        triggerHeight: $(window).height() * 0.8
     };
 
     /**

@@ -18,15 +18,15 @@ function pxService ($rootScope, $http, CONSTANT) {
 
     self.getPictures = function () {
         return $http({
-            'method': 'GET',
-            'url': 'https://api.500px.com/v1/collections/jpeer',
-            'headers': {
+            method: 'GET',
+            url: 'https://api.500px.com/v1/collections/jpeer',
+            headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            'params': {
-                'consumer_key': CONSTANT['500PX'].CONSUMER_KEY,
-                'path': 'jpeer-at',
-                'image_size': 20
+            params: {
+                consumer_key: CONSTANT['500PX'].CONSUMER_KEY,
+                path: 'jpeer-at',
+                image_size: 20
             }
         });
     };

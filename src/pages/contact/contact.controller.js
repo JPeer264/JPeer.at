@@ -36,9 +36,9 @@ function ContactPageController ($scope, $http) {
      */
     $scope.send = function () {
         return $http({
-            'url': 'https://mail.jpeer.at/',
-            'method': 'POST',
-            'data': $.param($scope.contact)
+            url: 'https://mail.jpeer.at/',
+            method: 'POST',
+            data: $.param($scope.contact)
         }).then(function () {
             $scope.isSent = true;
         }, function (err) {

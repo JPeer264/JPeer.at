@@ -13,7 +13,7 @@ timelineDirective.$inject = [
     'RevealService'
 ];
 
-function timelineDirective(RevealService) {
+function timelineDirective (RevealService) {
     // Runs during compile
     return {
         // name: '',
@@ -29,7 +29,7 @@ function timelineDirective(RevealService) {
         replace: true,
         // transclude: true,
         // compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
-        link: function(scope, iElm, iAttrs, controller) {
+        link: function () {
             // class instances
             var boxReveal = new RevealService();
             var bgReveal = new RevealService();
@@ -49,18 +49,18 @@ function timelineDirective(RevealService) {
 
                 // reveal boxes
                 boxReveal.reveal({
-                    'triggerHeight': triggerHeight
+                    triggerHeight: triggerHeight
                 }, $this, function ($trigger) {
                     $($boxes[key]).removeClass('jp-timeline__box--hidden');
                     $($boxes[key]).css({
-                        'top': $trigger.position().top,
+                        top: $trigger.position().top,
                     });
                 }, function () {
                     $($boxes[key]).addClass('jp-timeline__box--hidden');
                 });
 
                 bgReveal.custom({
-                    'triggerHeight': triggerHeight
+                    triggerHeight: triggerHeight
                 }, $this, function ($trigger, that) {
                     var thisOffsetTop = $trigger.offset().top;
 
