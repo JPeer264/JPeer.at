@@ -517,12 +517,12 @@ grunt.config.merge(loadConfig('./config/grunt/'));
 			],
 			app: [
 				// concat app
+				'copy:cache_html',
 				'rcs:html',
 				'html2js:template',
 				'concat:app',
 				'rcs:js',
-				'clean:template',
-				'clean:cache'
+				'clean:template'
 			],
 		},
 
