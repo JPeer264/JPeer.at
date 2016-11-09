@@ -158,7 +158,7 @@ module.exports = {
         },
 
         cache: {
-            src: '<%= paths.cache.scss %>'
+            src: ['<%= paths.cache.scss %>', '<%= paths.cache.html %>']
         },
 
         tests: {
@@ -182,7 +182,45 @@ module.exports = {
         }
     },
 
+    rcs: {
+        css: {
+            options: {
+                replaceCss: true
+            },
+            files: [{
+                expand: true,
+                cwd: '<%= paths.tmp.base %>',
+                src: '**/*.css',
+                dest: '<%= paths.tmp.base %>'
+            }]
+        },
+        html: {
+            files: [{
+                expand: true,
+                cwd: '<%= paths.cache.html %>',
+                src: '**/*.html',
+                dest: '<%= paths.cache.html %>'
+            }]
+        },
+        js: {
+            files: [{
+                expand: true,
+                cwd: '<%= paths.tmp.base %>',
+                src: ['**/*.js', '!**/vendor*js'],
+                dest: '<%= paths.tmp.base %>'
+            }]
+        }
+    },
+
     copy: {
+        cache_html: {
+            files: [{
+                expand: true,
+                cwd: '<%= paths.src.base %>',
+                src: ['**/*.html'],
+                dest: '<%= paths.cache.html %>'
+            }]
+        },
         dev: {
             files: [
                 // copy all images, svgs and jsons from assets
@@ -337,6 +375,7 @@ module.exports = {
             },
             module: '<%= pkg.name %>.templates',
             singleModule: true,
+            base: '<%= paths.cache.html %>'
         },
         template: {
             src:  '<%= paths.src.files.angular.html %>',
