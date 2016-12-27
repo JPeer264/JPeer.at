@@ -32,6 +32,7 @@ module.exports = function(grunt) {
 			base: '.',
 			cache: {
 				scss:   '<%= paths.base %>/.scss-cache',
+				html:   '<%= paths.base %>/.html-cache',
 			},
 			docs: '<%= paths.base %>/docs',
 			tmp: {
@@ -214,7 +215,7 @@ module.exports = function(grunt) {
 							'<%= paths.src.files.angular.services %>',
 							'<%= paths.src.files.angular.controller %>',
 						],
-						html: '<%= paths.src.folder.angular.base %>/**/*.html'
+						html: '<%= paths.cache.html %>/**/*.html'
 					}, // angular
 					couldBeVendor: {
 						js: [
@@ -503,7 +504,8 @@ grunt.config.merge(loadConfig('./config/grunt/'));
 				'concat:css',
 				'clean:createdSassByGrunt',
 				'manageScssFolders',
-				'autoprefixer'
+				'autoprefixer',
+				'rcs:css'
 			],
 			js: [
 				'concat:js',
@@ -515,9 +517,12 @@ grunt.config.merge(loadConfig('./config/grunt/'));
 			],
 			app: [
 				// concat app
+				'copy:cache_html',
+				'rcs:html',
 				'html2js:template',
 				'concat:app',
-				'clean:template',
+				'rcs:js',
+				'clean:template'
 			],
 		},
 
