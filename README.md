@@ -6,7 +6,7 @@ This page is entirely made with AngularJS. Why a framework for such a small appl
 
 > Note: make sure you have installed Node 4+ and npm 3+ installed. [More info](https://nodejs.org/)
 
-> Note: [grunt](https://www.npmjs.com/package/grunt-cli) must be installed globally - `npm i -g grunt-cli`
+> Note: [gulp](https://www.npmjs.com/package/gulp) must be installed globally - `npm i -g gulp`
 
 First of, you have to install all necessary dependencies by typing in following commands in your terminal:
 
@@ -20,7 +20,7 @@ bower i
 This will start a server and point into the `tmp` directory. When a file in the `src` directory is changed, it will automatically refresh the browser.
 
 ```sh
-grunt serve
+gulp serve
 ```
 
 **Documentation**
@@ -28,7 +28,7 @@ grunt serve
 This will start a server and point into the `docs` directory. The documentation is made with `ngdocs`.
 
 ```sh
-grunt serve:docs
+gulp serve:docs
 ```
 
 **Build**
@@ -36,11 +36,11 @@ grunt serve:docs
 There are two ways for building the application, first the staging version. The files are then located in the `tmp` directory:
 
 ```sh
-grunt build:dev
+gulp build:dev
 ```
 
 Secondly for the production. The files are then located in the `prod` directory.
 
 ```sh
-grunt build:prod
+gulp build:prod
 ```
