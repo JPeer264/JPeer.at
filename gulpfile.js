@@ -54,7 +54,7 @@ gulp.task('clean', () => {
 // 1. Managing
 // -----------
 gulp.task('manage', ['manage:css', 'manage:html', 'manage:js:vendor', 'manage:js:app', 'manage:js']);
-gulp.task('manage:js', ['manage:js:own', 'manage:js:app']);
+gulp.task('manage:js', ['manage:js:own', 'manage:js:app', 'manage:js:vendor']);
 gulp.task('manage:js:own', getTask('manage', 'js:own'));
 gulp.task('manage:js:app', getTask('manage', 'js:app'));
 gulp.task('manage:js:vendor', getTask('manage', 'js:vendor'));
@@ -118,30 +118,35 @@ gulp.task('build:prod', ['test', 'lint:fail'], () => {
 });
 
 gulp.task('build:prod:unsafe', () => {
-    let stream = merge();
-
     // clean everything before start to make the production build
     gulp.start('clean', () => {
         gulp.start('minify', () => {
-            // first stream to copy everything but html, js and scss
-            stream.add(gulp.src(_.flatten([
-                    gulp.data.get('paths.src.copy'),
-                    gulp.data.get('paths.src.ignore.html')
-                ]))
-                .pipe(gulp.dest(gulp.data.get('paths.dest.base'))));
-
-            // clean dev dir - optional
-            stream.add(gulp.src(gulp.data.get('paths.dev.base'))
-                .pipe(plugins.clean()));
-
-            // clean empty dir
-            stream.on('end', () => {
-                return deleteEmpty.sync(gulp.data.get('paths.dest.base'));
-            });
-
-            return stream;
+            // cannot add stream directly here,
+            // cause the stream will not emit correctly
+            gulp.start('build:prod:helper', () => {});
         });
     });
+});
+
+gulp.task('build:prod:helper', () => {
+    let stream = merge();
+    // first stream to copy everything but html, js and scss
+    stream.add(gulp.src(_.flatten([
+            gulp.data.get('paths.src.copy'),
+            gulp.data.get('paths.src.ignore.html')
+        ]))
+        .pipe(gulp.dest(gulp.data.get('paths.dest.base'))));
+
+    // clean dev dir - optional
+    stream.add(gulp.src(gulp.data.get('paths.dev.base'))
+        .pipe(plugins.clean()));
+
+    stream.on('end', () => {
+        console.log(gulp.data.get('paths.dest.base'))
+        return deleteEmpty.sync(gulp.data.get('paths.dest.base'));
+    });
+
+    return stream;
 });
 
 // 7. Serve

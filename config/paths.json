@@ -43,6 +43,7 @@
             "tests": "<%= paths.src.base  %>/**/*.spec.js",
             "copy": [
                 "<%= paths.src.base %>/**/*",
+                "<%= paths.src.base %>/**/.*",
                 "!<%= paths.src.base %>/**/*.html",
                 "!<%= paths.src.base %>/**/*.js",
                 "!<%= paths.src.base %>/**/*.scss"

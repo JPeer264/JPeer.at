@@ -2,12 +2,15 @@ module.exports = options => {
     const gulp    = options.gulp;
     const paths   = options.paths;
     const plugins = options.plugins;
+    const merge   = require('merge-stream');
 
     return {
         js: () => {
             return gulp.src(gulp.data.get('paths.dev.files.js'))
                 .pipe(plugins.sourcemaps.init({loadMaps: true}))
-                .pipe(plugins.rcs())
+                .pipe(plugins.rcs({
+                    exclude: '**/vendor.js'
+                }))
                 .pipe(plugins.uglify())
                 .pipe(plugins.rename({
                     suffix: '.min'
@@ -27,7 +30,9 @@ module.exports = options => {
                 .pipe(gulp.dest(gulp.data.get('paths.dest.folder.assets.css')));
         },
         html: () => {
-            return gulp.src(gulp.data.get('paths.src.base') + '/index.html')
+            const stream = merge();
+
+            stream.add(gulp.src(gulp.data.get('paths.src.base') + '/index.html')
                 .pipe(plugins.cdnify({
                     rewriter: url => {
                         var arr = url.split('.');
@@ -41,7 +46,24 @@ module.exports = options => {
                 }))
                 .pipe(plugins.rcs())
                 .pipe(plugins.htmlmin({ collapseWhitespace: true }))
-                .pipe(gulp.dest(gulp.data.get('paths.dest.base')));
+                .pipe(gulp.dest(gulp.data.get('paths.dest.base'))));
+
+            stream.add(gulp.src(gulp.data.get('paths.src.files.angular.html'))
+                .pipe(plugins.sourcemaps.init())
+                .pipe(plugins.rcs())
+                .pipe(plugins.htmlmin({ collapseWhitespace: true }))
+                .pipe(plugins.ngHtml2js({
+                    moduleName: 'jpeer.templates'
+                }))
+                .pipe(plugins.concat('template.js'))
+                .pipe(plugins.uglify())
+                .pipe(plugins.rename({
+                    suffix: '.min'
+                }))
+                .pipe(plugins.sourcemaps.write(gulp.data.get('paths.base')))
+                .pipe(gulp.dest(gulp.data.get('paths.dest.folder.assets.js'))))
+
+            return stream;
         }
     };
 };
