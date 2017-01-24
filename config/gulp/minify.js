@@ -7,7 +7,6 @@ module.exports = options => {
     return {
         js: () => {
             return gulp.src(gulp.data.get('paths.dev.files.js'))
-                .pipe(plugins.sourcemaps.init({loadMaps: true}))
                 .pipe(plugins.rcs({
                     exclude: '**/vendor.js'
                 }))
@@ -15,18 +14,15 @@ module.exports = options => {
                 .pipe(plugins.rename({
                     suffix: '.min'
                 }))
-                .pipe(plugins.sourcemaps.write(gulp.data.get('paths.base')))
                 .pipe(gulp.dest(gulp.data.get('paths.dest.folder.assets.js')));
         },
         css: () => {
             return gulp.src(gulp.data.get('paths.dev.files.css'))
-                .pipe(plugins.sourcemaps.init({loadMaps: true}))
                 .pipe(plugins.rcs())
                 .pipe(plugins.cleanCss())
                 .pipe(plugins.rename({
                     suffix: '.min'
                 }))
-                .pipe(plugins.sourcemaps.write(gulp.data.get('paths.base')))
                 .pipe(gulp.dest(gulp.data.get('paths.dest.folder.assets.css')));
         },
         html: () => {
@@ -49,7 +45,6 @@ module.exports = options => {
                 .pipe(gulp.dest(gulp.data.get('paths.dest.base'))));
 
             stream.add(gulp.src(gulp.data.get('paths.src.files.angular.html'))
-                .pipe(plugins.sourcemaps.init())
                 .pipe(plugins.rcs())
                 .pipe(plugins.htmlmin({ collapseWhitespace: true }))
                 .pipe(plugins.ngHtml2js({
@@ -60,7 +55,6 @@ module.exports = options => {
                 .pipe(plugins.rename({
                     suffix: '.min'
                 }))
-                .pipe(plugins.sourcemaps.write(gulp.data.get('paths.base')))
                 .pipe(gulp.dest(gulp.data.get('paths.dest.folder.assets.js'))))
 
             return stream;
