@@ -33,6 +33,17 @@ module.exports = options => {
                     rewriter: url => {
                         var arr = url.split('.');
 
+                        // small hack for google fonts or cdn's with http requests
+                        for (var value of arr) {
+                            if (value.indexOf('google') === 0) {
+                                return;
+                            }
+
+                            if (value.indexOf('http') === 0) {
+                                return;
+                            }
+                        }
+
                         if (arr[arr.length - 2] !== 'min') {
                             arr.splice((arr.length - 1), 0, 'min');
                         }
