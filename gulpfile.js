@@ -78,7 +78,7 @@ gulp.task('lint:html:fail', getTask('lint', 'html:fail'));
 // ------------
 gulp.task('minify', ['minify:css', 'minify:js', 'minify:html']);
 gulp.task('minify:js', ['manage:js', 'minify:css'], getTask('minify', 'js'));
-gulp.task('minify:css', ['manage:sass'], getTask('minify', 'css'));
+gulp.task('minify:css', ['manage:css'], getTask('minify', 'css'));
 gulp.task('minify:html', ['minify:css'], getTask('minify', 'html'));
 
 // 4. Testing
