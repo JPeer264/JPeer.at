@@ -99,7 +99,7 @@ module.exports = options => {
         html: () => {
             return gulp.src(gulp.data.get('paths.src.files.angular.html'))
                 .pipe(plugins.sourcemaps.init())
-                .pipe(plugins.htmlmin({collapseWhitespace: true}))
+                .pipe(plugins.htmlmin({ collapseWhitespace: true }))
                 .pipe(plugins.ngHtml2js({
                     moduleName: 'jpeer.templates'
                 }))

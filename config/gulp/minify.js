@@ -8,7 +8,8 @@ module.exports = options => {
         js: () => {
             return gulp.src(gulp.data.get('paths.dev.files.js'))
                 .pipe(plugins.rcs({
-                    exclude: '**/vendor.js'
+                    excludeFile: '**/vendor.js',
+                    exclude: 'slider'
                 }))
                 .pipe(plugins.uglify())
                 .pipe(plugins.rename({
