@@ -6,7 +6,7 @@ This page is entirely made with AngularJS. Why a framework for such a small appl
 
 > Note: make sure you have installed Node 4+ and npm 3+ installed. [More info](https://nodejs.org/)
 
-> Note: [gulp](https://www.npmjs.com/package/gulp) must be installed globally - `npm i -g gulp`
+> Note: [gulp](https://www.npmjs.com/package/gulp) must be installed globally - `npm i -g gulp-cli`
 
 First of, you have to install all necessary dependencies by typing in following commands in your terminal:
 
