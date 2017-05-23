@@ -54,10 +54,11 @@ gulp.task('clean', () => {
 // 1. Managing
 // -----------
 gulp.task('manage', ['manage:css', 'manage:html', 'manage:js:vendor', 'manage:js:app', 'manage:js']);
-gulp.task('manage:js', ['manage:js:own', 'manage:js:app', 'manage:js:vendor']);
+gulp.task('manage:js', ['manage:js:own', 'manage:js:app', 'manage:js:vendor', 'manage:js:sw']);
 gulp.task('manage:js:own', getTask('manage', 'js:own'));
 gulp.task('manage:js:app', getTask('manage', 'js:app'));
 gulp.task('manage:js:vendor', getTask('manage', 'js:vendor'));
+gulp.task('manage:js:sw', getTask('manage', 'js:sw'));
 gulp.task('manage:sass', ['manage:sass:browser'], getTask('manage', 'sass'));
 gulp.task('manage:sass:browser', getTask('manage', 'sass:browser'));
 gulp.task('manage:css', ['manage:sass'], getTask('manage', 'css:vendor'))
@@ -159,6 +160,7 @@ gulp.task('serve:dev', ['build:dev'], () => {
         open: true
     });
 
+    gulp.watch(gulp.data.get('paths.src.folder.assets.js') + '/sw.js', ['manage:js']).on('change', browserSync.reload);
     gulp.watch(gulp.data.get('paths.src.allFiles.js'), ['manage:js']).on('change', browserSync.reload);
     gulp.watch(gulp.data.get('paths.src.allFiles.scss'), ['manage:sass']).on('change', browserSync.reload);
     gulp.watch(gulp.data.get('paths.src.allFiles.html'), () => {

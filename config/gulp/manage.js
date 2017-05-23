@@ -57,6 +57,16 @@ module.exports = options => {
                 .pipe(plugins.concat('global.css'))
                 .pipe(gulp.dest(gulp.data.get('paths.dev.folder.assets.css')));
         },
+        'js:sw': () => {
+            return gulp.src(gulp.data.get('paths.src.base') + '/sw.js')
+                .pipe(plugins.sourcemaps.init())
+                .pipe(plugins.babel({
+                    presets: ['es2015']
+                }))
+                .pipe(plugins.concat('sw.js'))
+                .pipe(plugins.sourcemaps.write(gulp.data.get('paths.base')))
+                .pipe(gulp.dest(gulp.data.get('paths.dev.base')));
+        },
         'js:own': () => {
             return gulp.src(gulp.util._.flatten(gulp.data.get('paths.src.files.assets.js')))
                 .pipe(plugins.sourcemaps.init())
