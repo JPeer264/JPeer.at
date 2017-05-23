@@ -1,6 +1,7 @@
 # Usage
 ```sh
 $ npm i -g gulp-cli
+$ npm i -g bower
 $ yarn
 $ gulp serve
 ```
