@@ -1,7 +1,9 @@
 self.addEventListener('fetch', function fetcher(event) {
   const request = event.request;
 
-  if (request.url.indexOf('assets') > -1) {
+  console.log(request.url);
+
+  if (request.url.indexOf('assets') > -1 || request.url.indexOf('index.html') > -1) {
     console.log('Handling fetch event for', event.request.url);
 
     event.respondWith(
