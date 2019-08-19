@@ -1,0 +1,68 @@
+@import "normalize.css";
+
+@import "./variables.scss";
+
+@mixin animationDelay($elementAmount, $shownClass) {
+  @for $i from 0 to ($elementAmount)  {
+    &:nth-child(#{$i + 1}) {
+      background: lighten($primary-color, ($i) * 10%);
+      transition-delay: ($i + 1) * 0.1s;
+
+      #{$shownClass} & {
+        transform: rotate(#{$elementAmount - $i}deg);
+      }
+    }
+  }
+}
+
+html, body {
+  box-sizing: border-box;
+  background: $background-color;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.jp-section-top {
+  height: 10rem;
+  transform: translateY(-100%);
+  position: relative;
+
+  &__inner {
+    height: inherit;
+    width: 140%;
+    background: $primary-color;
+    transition: transform .3s;
+    transform: rotate(0);
+    transform-origin: 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include animationDelay(5, ".jp-dom-loaded");
+  }
+}
+
+.jp-logo {
+  width: 50px;
+  height: 50px;
+  background: $primary-color;
+  padding: .5rem;
+  border-radius: 50%;
+  position: relative;
+  top: -140px;
+  left: 30px;
+  transform: translateX(-200%);
+  transition: transform .3s .3s;
+
+  .jp-dom-loaded & {
+    transform: translateX(0);
+  }
+
+  img {
+    width: 100%;
+  }
+}

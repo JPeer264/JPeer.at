@@ -1,9 +1,4 @@
-# modules
-bower_components
 node_modules
-
-# grunt generated dir
-dev
-dest
-docs
-.html-cache
+.DS_Store
+dist
+.cache

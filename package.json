@@ -1,70 +1,41 @@
 {
   "name": "jpeer",
-  "version": "1.0.0-alpha",
+  "version": "0.0.0",
   "description": "My website",
   "main": "",
   "scripts": {
-    "test": "grunt test",
-    "postinstall": "bower install"
+    "start": "parcel ./src/index.html -p 2604",
+    "build": "rimraf ./dist && parcel build --no-cache -d dist ./src/index.html --public-url ./"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JPeer264/JPeer.at.git"
   },
-  "author": [
-    {
-      "name": "Jan Peer Stöcklmair",
-      "email": "janpeer264@gmail.com"
-    }
-  ],
-  "license": "ISC",
+  "author": {
+    "name": "Jan Peer Stöcklmair",
+    "email": "janpeer264@gmail.com"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/JPeer264/JPeer.at/issues"
   },
-  "dependencies": {},
+  "homepage": "https://github.com/JPeer264/JPeer.at#readme",
   "devDependencies": {
-    "autoprefixer": "^6.5.3",
-    "babel-eslint": "^7.1.1",
-    "babel-preset-es2015": "^6.18.0",
-    "browser-sync": "^2.18.5",
-    "chai": "^3.5.0",
-    "delete-empty": "^0.1.3",
-    "fs-extra": "^1.0.0",
-    "glob": "^7.1.1",
-    "grunt": "^1.0.1",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-cdnify": "^1.0.7",
-    "gulp-clean": "^0.3.2",
-    "gulp-clean-css": "^2.3.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-eslint": "^3.0.1",
-    "gulp-filter": "^4.0.0",
-    "gulp-htmllint": "^0.0.11",
-    "gulp-htmlmin": "^3.0.0",
-    "gulp-load-plugins": "^1.4.0",
-    "gulp-ng-html2js": "^0.2.2",
-    "gulp-postcss": "^6.2.0",
-    "gulp-rcs": "^0.4.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.0.0",
-    "gulp-sass-lint": "^1.3.2",
-    "gulp-sourcemaps": "^1.9.1",
-    "gulp-uglify": "^2.0.0",
-    "gulp-util": "^3.0.7",
-    "karma": "^1.3.0",
-    "karma-babel-preprocessor": "^6.0.1",
-    "karma-chai": "^0.1.0",
-    "karma-chrome-launcher": "^2.0.0",
-    "karma-coverage": "^1.1.1",
-    "karma-firefox-launcher": "^1.0.0",
-    "karma-mocha": "^1.3.0",
-    "karma-phantomjs-launcher": "^1.0.2",
-    "lodash": "^4.17.2",
-    "main-bower-files": "^2.13.1",
-    "merge-stream": "^1.0.1",
-    "mocha": "^3.2.0",
-    "require-dir": "^0.3.1"
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "eslint": "^6.2.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-ogimage": "^1.1.0",
+    "rimraf": "^3.0.0",
+    "sass": "^1.22.10",
+    "typescript": "^3.5.2"
   },
-  "homepage": "https://github.com/JPeer264/JPeer.at#readme"
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "preact": "^8.5.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
 }
