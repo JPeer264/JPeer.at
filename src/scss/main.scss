@@ -23,11 +23,7 @@ html, body {
   background: $background-color;
   min-height: 100vh;
   width: 100vw;
-  font-family: 'Open Sans', sans-serif;
-}
-
-h1, h2, h3 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Ubuntu Mono', sans-serif;
 }
 
 *,
@@ -43,6 +39,19 @@ h1, h2, h3 {
   max-width: 1440px;
   margin: 0 auto;
   overflow: hidden;
+}
+
+.jp-self-description {
+  max-width: 500px;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .5s .5s, transform .5s .5s;
+
+  .jp-dom-loaded & {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .jp-header {
