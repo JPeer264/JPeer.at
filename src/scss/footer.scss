@@ -7,7 +7,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
 
     i {
       margin: 0.5rem;
