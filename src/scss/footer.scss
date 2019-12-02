@@ -1,0 +1,16 @@
+.jp-footer {
+  height: 50px;
+  background: $primary-color;
+
+  &__icon-wrapper {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    i {
+      margin: 0.5rem;
+    }
+  }
+}
