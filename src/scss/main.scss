@@ -47,6 +47,8 @@ html, body {
   opacity: 0;
   transform: translateY(10px);
   transition: opacity .5s .5s, transform .5s .5s;
+  padding: 2rem;
+  text-align: center;
 
   .jp-dom-loaded & {
     opacity: 1;
