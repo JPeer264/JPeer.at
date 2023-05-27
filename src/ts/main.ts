@@ -1,3 +1,4 @@
+import 'normalize.css';
 import './icons';
 
 document.addEventListener('DOMContentLoaded', async () => {

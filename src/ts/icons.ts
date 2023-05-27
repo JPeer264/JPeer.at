@@ -4,12 +4,7 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
 import { faShareAlt } from '@fortawesome/free-solid-svg-icons/faShareAlt';
 
-library.add(
-  faGithub,
-  faLinkedin,
-  faEnvelope,
-  faShareAlt,
-);
+library.add(faGithub, faLinkedin, faEnvelope, faShareAlt);
 
 config.autoReplaceSvg = 'nest';
 dom.watch();

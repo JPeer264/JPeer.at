@@ -2,11 +2,10 @@
   "name": "jpeer",
   "version": "0.0.0",
   "description": "My website",
-  "main": "",
   "scripts": {
     "start": "parcel ./src/index.html -p 2604",
-    "build": "rimraf ./dist && parcel build --no-cache -d dist ./src/index.html --public-url ./",
-    "deploy": "npm run build && gh-pages -d dist"
+    "lint": "eslint .",
+    "build": "rm -rf ./dist && parcel build --no-cache ./src/index.html --public-url ./"
   },
   "repository": {
     "type": "git",
@@ -22,27 +21,25 @@
   },
   "homepage": "https://github.com/JPeer264/JPeer.at#readme",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^1.11.0",
-    "@typescript-eslint/parser": "^1.11.0",
-    "eslint": "^6.2.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "gh-pages": "^2.1.1",
-    "parcel-bundler": "^1.12.3",
-    "parcel-plugin-ogimage": "^1.2.0",
-    "parcel-plugin-rcs": "^1.0.0",
-    "parcel-plugin-static-files-copy": "^2.2.1",
-    "rimraf": "^3.0.0",
-    "sass": "^1.22.10",
-    "typescript": "^3.5.2"
+    "@parcel/transformer-sass": "^2.9.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@typescript-eslint/parser": "^5.59.7",
+    "eslint": "^8.41.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "parcel": "^2.9.0",
+    "prettier": "2.8.8",
+    "sass": "^1.62.1",
+    "typescript": "^5.0.4"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.25",
-    "@fortawesome/free-brands-svg-icons": "^5.11.2",
-    "@fortawesome/free-solid-svg-icons": "^5.11.2",
-    "normalize.css": "^8.0.1",
-    "preact": "^8.5.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "normalize.css": "^8.0.1"
   }
 }

@@ -1,9 +1,6 @@
-@import "normalize.css";
-
 @import "./variables.scss";
 @import "./footer.scss";
 @import "./content.scss";
-@import "./project.scss";
 
 @mixin animationDelay($elementAmount, $shownClass) {
   @for $i from 0 to ($elementAmount)  {
